@@ -1,0 +1,100 @@
+:root {
+  --burger-line: #ffffff;
+  --burger-line-focus: #b4278e;
+  --burger-background: #FF3E79;
+  --burger-line-active: transparent;
+}
+
+.burger-menu {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 0;
+    text-indent: -9999px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: var(--burger-background);
+    margin-right: 16px;
+}
+
+.burger-menu::before {
+  content: none;
+  position: absolute;
+  top: 4px;
+  right: -20px;
+  width: 2px;
+  height: 32px;
+  border-radius: 1px;
+  background-color: var(--separator-background);
+}
+
+.burger-menu:focus {
+    outline: 2px solid var(--burger-line-focus);
+}
+
+.burger-menu--line {
+    position: absolute;
+    top: 19px;
+    left: 12px;
+    height: 2px;
+    width: 10px;
+    border-radius: 1px;
+    background-color: var(--burger-line);
+    transition: transform 0.3s;
+}
+
+.burger-menu--line::before,
+.burger-menu--line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    border-radius: 1px;
+    background-color: var(--burger-line);
+}
+
+.burger-menu--line::before {
+    top: -7px;
+    transition: transform 0.3s, top 0.3s;
+    width: 18px;
+}
+
+.burger-menu--line::after {
+    bottom: -7px;
+    transition: transform 0.3s, bottom 0.3s;
+    width: 14px;
+}
+
+.burger-menu.is-active .burger-menu--line {
+    background-color: var(--burger-line-active);
+    transform: rotate(360deg);
+}
+
+.burger-menu.is-active .burger-menu--line::before {
+    left: -3px;
+    width: 21px;
+    top: 0px;
+    transform: rotate(45deg);
+}
+
+.burger-menu.is-active .burger-menu--line::after {
+    left: -3px;
+    width: 21px;
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+@media (min-width: 580px) {
+  .burger-menu {
+    margin-right: 42px;
+}
+  .burger-menu::before {
+    content: '';
+  }
+}

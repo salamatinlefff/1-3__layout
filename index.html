@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Мы являемся авторизованным сервисным центром по ремонту техники Dell">
+  <meta name="keywords" content="ремонт, техники, Dell">
+
+  <title>Services</title>
+
+  <link href="./assets/img/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+  <link href="./assets/img/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="./assets/img/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+  <link rel="manifest" href="./assets/img/favicon/site.webmanifest">
+  <link color="#5bbad5" href="./assets/img/favicon/safari-pinned-tab.svg" rel="mask-icon">
+  <meta content="#da532c" name="msapplication-TileColor">
+  <meta content="#ffffff" name="theme-color">
+
+  <link href="./assets/css/normalize.css" rel="stylesheet">
+  <link href="./assets/css/fonts.css" rel="stylesheet">
+  <link href="./assets/css/default.css" rel="stylesheet">
+  <link href="./assets/css/burger.css" rel="stylesheet">
+  <link href="./assets/css/header.css" rel="stylesheet">
+  <link href="./assets/css/services.css" rel="stylesheet">
+
+  <script defer src="./assets/scripts/burger.js"></script>
+
+</head>
+
+<body>
+
+  <header class="header">
+    <button class="header__burger-menu burger-menu" aria-label="Открыть меню">
+      <span class="burger-menu--line"></span>
+    </button>
+
+    <img alt="Логотип компании CPS" class="header__logo" src="./assets/img/logo.svg">
+
+    <div class="header__feedback feedback">
+      <div class="feedback__contacts contacts"  hidden>
+        <button class="contacts__button button" aria-label="Позвонить">
+          <svg class="feedback__img" width="40" height="40" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m12.76 23.25 2.54-.29c.61-.07 1.21.14 1.64.57l1.84 1.84c2.83-1.44 5.15-3.75 6.59-6.59l-1.85-1.85a1.99 1.99 0 0 1-.57-1.64l.29-2.52c.12-1.01.97-1.77 1.99-1.77h1.73c1.13 0 2.07.94 2 2.07-.53 8.54-7.36 15.36-15.89 15.89-1.13.07-2.07-.87-2.07-2v-1.73c-.01-1.01.75-1.86 1.76-1.98Z" fill="currentColor"/></svg>
+        </button>
+
+        <button class="contacts__button button" aria-label="Написать сообщение">
+          <svg class="feedback__img" width="40" height="40" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M28 11H12c-1.1 0-1.99.9-1.99 2L10 31l4-5h14c1.1 0 2-.9 2-2V13c0-1.1-.9-2-2-2Zm-7 11h-6c-.55 0-1-.45-1-1s.45-1 1-1h6c.55 0 1 .45 1 1s-.45 1-1 1Zm4-5H15c-.55 0-1-.45-1-1s.45-1 1-1h10c.55 0 1 .45 1 1s-.45 1-1 1Z" fill="currentColor"/><mask id="a" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="10" y="11" width="20" height="20"><path fill-rule="evenodd" clip-rule="evenodd" d="M28 11H12c-1.1 0-1.99.9-1.99 2L10 31l4-5h14c1.1 0 2-.9 2-2V13c0-1.1-.9-2-2-2Zm-7 11h-6c-.55 0-1-.45-1-1s.45-1 1-1h6c.55 0 1 .45 1 1s-.45 1-1 1Zm4-5H15c-.55 0-1-.45-1-1s.45-1 1-1h10c.55 0 1 .45 1 1s-.45 1-1 1Z" fill="currentColor"/></mask></svg>
+        </button>
+
+        <button class="contacts__button button" aria-label="Профиль">
+          <svg class="feedback__img" width="40" height="40" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.5 19a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM10.017 26.612c-.13.73.518 1.388 1.322 1.388H28.66c.83 0 1.453-.659 1.323-1.388C29.23 22.4 25.056 20 20 20c-5.057 0-9.231 2.4-9.983 6.612Z" fill="currentColor"/></svg>
+        </button>
+
+      </div>
+
+      <div class="feedback__status status">
+        <button class="status__button button" aria-label="Оставить заявку">
+          <svg class="feedback__img" width="40" height="40" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m18.258 23.458.409-.409-1.717-1.717-.409.41-.204-.205c-.327-.368-.654-.573-.981-.532-.245 0-.45.164-.613.409-.246.409-.123.859-.082 1.145 0 .082.04.122.04.204 0 .123 0 .286-.285.327-.41.123-.94.246-1.472.532-.736.409-1.226.777-1.513 1.145-1.512 1.962-1.43 3.639-1.43 3.72 0 .123.04.205.122.246l1.104 1.144c.082.082.164.123.245.123h.123c.409 0 1.88-.082 3.597-1.431.368-.286.736-.777 1.145-1.513.286-.49.45-1.022.531-1.472.082-.286.205-.286.327-.286.041 0 .123.041.205.041.163.04.327.082.531.082.204 0 .409-.041.613-.164.245-.163.409-.368.45-.613.04-.327-.123-.654-.49-.94l-.246-.246ZM26.884 14.878l1.135-.552c.042-.043.126-.085.168-.127l1.723-2.337c.126-.17.126-.425-.042-.553l-1.177-1.19c-.126-.127-.378-.17-.546-.042l-2.312 1.742a.589.589 0 0 0-.126.17l-.546 1.147L21 17.216 22.765 19l4.119-4.122Z" fill="currentColor"/><path d="M27.853 23.045c-.99-1.041-2.414-1.416-3.759-1.041l-6.449-6.83c.08-.375.119-.709.119-1.083a4.184 4.184 0 0 0-1.147-2.874 3.697 3.697 0 0 0-3.996-1 .542.542 0 0 0-.238.333c0 .125.04.25.119.375l1.939 2.041c.435.458.435 1.25 0 1.708a1.129 1.129 0 0 1-1.623 0l-1.938-2.041c-.119-.083-.238-.125-.396-.083-.118 0-.237.124-.277.25-.474 1.457-.118 3.081.91 4.164.712.792 1.741 1.208 2.77 1.208.316 0 .672-.042.989-.125l6.488 6.83a4.339 4.339 0 0 0 .99 3.957A3.668 3.668 0 0 0 25.083 30c.434 0 .83-.083 1.265-.208a.491.491 0 0 0 .277-.292.346.346 0 0 0-.119-.375l-1.938-2.04a1.332 1.332 0 0 1-.356-.875c0-.333.118-.625.356-.875.237-.25.514-.374.83-.374.317 0 .594.125.832.374l1.938 2.041a.617.617 0 0 0 .356.125c.119-.042.238-.125.277-.25A4.92 4.92 0 0 0 29 25.92c0-1.083-.396-2.125-1.147-2.874Z" fill="currentColor"/></svg>
+        </button>
+
+        <button class="status__button button" aria-label="Статус ремонта">
+          <svg class="feedback__img" width="40" height="40" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 11a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v17.5a1.5 1.5 0 0 0-1.5 1.5h-1a1.5 1.5 0 0 0-3 0h-1a1.5 1.5 0 0 0-3 0h-1a1.5 1.5 0 0 0-3 0h-1a1.5 1.5 0 0 0-1.5-1.5V11Zm9.416 10.788a4.236 4.236 0 0 1-3.086.595c-1.803-.336-3.24-1.85-3.47-3.672a4.318 4.318 0 0 1 4.994-4.83c1.802.287 3.25 1.763 3.547 3.555a4.248 4.248 0 0 1-.614 2.991l2.109 2.1a.97.97 0 0 1-1.37 1.37l-2.11-2.109Zm-4.71-3.73a2.354 2.354 0 1 1 4.707.002 2.354 2.354 0 0 1-4.707-.001Z" fill="currentColor"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="main__services services">
+      <div class="services__wrapper-top">
+        <h2 class="services__title title">Услуги и сервисы</h2>
+        <div class="feedback">
+          <div class="feedback__status status feedback__status--hidden" hidden>
+            <button class="status__button button status__button--services" aria-label="Оставить заявку">
+              <span class="feedback__text">Оставить заявку</span>
+              <svg class="feedback__img" width="40" height="40" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m18.258 23.458.409-.409-1.717-1.717-.409.41-.204-.205c-.327-.368-.654-.573-.981-.532-.245 0-.45.164-.613.409-.246.409-.123.859-.082 1.145 0 .082.04.122.04.204 0 .123 0 .286-.285.327-.41.123-.94.246-1.472.532-.736.409-1.226.777-1.513 1.145-1.512 1.962-1.43 3.639-1.43 3.72 0 .123.04.205.122.246l1.104 1.144c.082.082.164.123.245.123h.123c.409 0 1.88-.082 3.597-1.431.368-.286.736-.777 1.145-1.513.286-.49.45-1.022.531-1.472.082-.286.205-.286.327-.286.041 0 .123.041.205.041.163.04.327.082.531.082.204 0 .409-.041.613-.164.245-.163.409-.368.45-.613.04-.327-.123-.654-.49-.94l-.246-.246ZM26.884 14.878l1.135-.552c.042-.043.126-.085.168-.127l1.723-2.337c.126-.17.126-.425-.042-.553l-1.177-1.19c-.126-.127-.378-.17-.546-.042l-2.312 1.742a.589.589 0 0 0-.126.17l-.546 1.147L21 17.216 22.765 19l4.119-4.122Z" fill="currentColor"/><path d="M27.853 23.045c-.99-1.041-2.414-1.416-3.759-1.041l-6.449-6.83c.08-.375.119-.709.119-1.083a4.184 4.184 0 0 0-1.147-2.874 3.697 3.697 0 0 0-3.996-1 .542.542 0 0 0-.238.333c0 .125.04.25.119.375l1.939 2.041c.435.458.435 1.25 0 1.708a1.129 1.129 0 0 1-1.623 0l-1.938-2.041c-.119-.083-.238-.125-.396-.083-.118 0-.237.124-.277.25-.474 1.457-.118 3.081.91 4.164.712.792 1.741 1.208 2.77 1.208.316 0 .672-.042.989-.125l6.488 6.83a4.339 4.339 0 0 0 .99 3.957A3.668 3.668 0 0 0 25.083 30c.434 0 .83-.083 1.265-.208a.491.491 0 0 0 .277-.292.346.346 0 0 0-.119-.375l-1.938-2.04a1.332 1.332 0 0 1-.356-.875c0-.333.118-.625.356-.875.237-.25.514-.374.83-.374.317 0 .594.125.832.374l1.938 2.041a.617.617 0 0 0 .356.125c.119-.042.238-.125.277-.25A4.92 4.92 0 0 0 29 25.92c0-1.083-.396-2.125-1.147-2.874Z" fill="currentColor"/></svg>
+            </button>
+      
+            <button class="status__button button status__button--services" aria-label="Статус ремонта">
+              <span class="feedback__text">Статус ремонта</span>
+              <svg class="feedback__img" width="40" height="40" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 11a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v17.5a1.5 1.5 0 0 0-1.5 1.5h-1a1.5 1.5 0 0 0-3 0h-1a1.5 1.5 0 0 0-3 0h-1a1.5 1.5 0 0 0-3 0h-1a1.5 1.5 0 0 0-1.5-1.5V11Zm9.416 10.788a4.236 4.236 0 0 1-3.086.595c-1.803-.336-3.24-1.85-3.47-3.672a4.318 4.318 0 0 1 4.994-4.83c1.802.287 3.25 1.763 3.547 3.555a4.248 4.248 0 0 1-.614 2.991l2.109 2.1a.97.97 0 0 1-1.37 1.37l-2.11-2.109Zm-4.71-3.73a2.354 2.354 0 1 1 4.707.002 2.354 2.354 0 0 1-4.707-.001Z" fill="currentColor"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+        <div class="services--list">
+          <button class="services--item services--item--active" tabindex="0" aria-label="Ремонтируемые устройства">Ремонтируемые устройства</button>
+          <button class="services--item" tabindex="0" aria-label="Дополнительные услуги">Дополнительные услуги</button>
+          <button class="services--item" tabindex="0" aria-label="Цены на услуги">Цены на услуги</button>
+          <button class="services--item" tabindex="0" aria-label="Адреса сервисных центров">Адреса сервисных центров</button>
+          <button class="services--item" tabindex="0" aria-label="Специальные цены">Специальные цены</button>
+          <button class="services--item" tabindex="0" aria-label="Отзывы">Отзывы</button>
+        </div>
+
+      <section class="services__about about">
+        <div class="about__left">
+          <h3 class="visually-hidden about__title">О компании</h3>
+
+        <div class="about__desc">
+          <p class="about__desc--first">
+            Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+          </p>
+          <p class="about__desc--second">
+            Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+          </p>  
+        </div>
+
+        <button class="about__button-continue" aria-label="Читать далее">
+          <svg class="about__button-continue--img" width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 7.5 12 10 9.5 7.5a.707.707 0 1 0-1 1l2.793 2.793a1 1 0 0 0 1.414 0L15.5 8.5a.707.707 0 0 0-1-1Zm0 6L12 16l-2.5-2.5a.707.707 0 1 0-1 1l2.793 2.793a1 1 0 0 0 1.414 0L15.5 14.5a.707.707 0 0 0-1-1Z" fill="currentColor"/></svg>
+          Читать далее</button>
+        </div>
+
+        <div class="about__right">
+          <img class="about__img" src="./assets/img/shedule.jpg" alt="График работы компании CPS и логотип компании" width="530" height="380">
+        </div>
+      </section>
+    </section>
+
+  </main>
+
+</body>
+</html>
