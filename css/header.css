@@ -14,13 +14,14 @@
   margin-right: auto;
 }
 
-.feedback__img {
+.status__img,
+.contacts__img {
   color: var(--second-background);
   border-radius: 50%;
   background-color: var(--buttons-background);
 }
 
-.feedback__status {
+.status {
   position: relative;
   display: flex;
   min-width: 116px;
@@ -28,7 +29,7 @@
   justify-content: right;
 }
 
-.feedback__status::before {
+.status::before {
   content: '';
   position: absolute;
   top: 4px;
@@ -44,7 +45,7 @@
     padding: 18px 24px;
   }
 
-  .feedback {
+  .header__feedback {
     display: flex;
   }
 
