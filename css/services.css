@@ -219,6 +219,9 @@
     letter-spacing: -0.2px;
   }
 
+  .menu__list {
+    overflow: auto;
+  }
 
   .about__desc::after {
     content: none;
