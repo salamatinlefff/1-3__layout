@@ -1,21 +1,29 @@
-function burgerMenu(option) {
 
-  const {
-    selectorButton = '.burger-menu',
-    activeBurger = 'is-active',
-    selectorMenu,
-    openMenuSelector
-  } = option
 
-  const burgerButton = document.querySelector(selectorButton);
+function burgerMenu() {
+  const burgerButton = document.querySelector('.burger-menu');
+  const nav = document.querySelector('.nav');
+  const navWrapper = document.querySelector('.nav__wrapper');
+  const closeButton = document.querySelector('.nav__button-close');
 
-  burgerButton.addEventListener("click", event => {
-    event.preventDefault();
-    burgerButton.classList.toggle(activeBurger)
-  });
+  const openMenu = () => {
+    nav.classList.add('nav--active');
+    navWrapper.classList.add('nav__wrapper--active');
+  }
+
+  const closeMenu = () => {
+    nav.classList.remove('nav--active');
+    navWrapper.classList.remove('nav__wrapper--active');
+  }
+
+  burgerButton.addEventListener("click", openMenu);
+  closeButton.addEventListener('click', closeMenu);
+
+  nav.addEventListener('click', event => {
+    if(event.target.classList.contains('nav')) {
+      closeMenu();
+    }
+  })
 }
 
-burgerMenu({
-  selectorMenu: '.navigation__list',
-  openMenuSelector: 'navigation__list_active',
-})
+burgerMenu();

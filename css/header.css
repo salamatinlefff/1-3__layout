@@ -8,19 +8,6 @@
   background-color: var(--second-background);
 }
 
-.header__logo {
-  width: 96px;
-  height: 51px;
-  margin-right: auto;
-}
-
-.status__img,
-.contacts__img {
-  color: var(--second-background);
-  border-radius: 50%;
-  background-color: var(--buttons-background);
-}
-
 .status {
   position: relative;
   display: flex;
@@ -41,7 +28,7 @@
 }
 
 @media (min-width: 580px) {
-  .header {
+  .page__header {
     padding: 18px 24px;
   }
 
@@ -57,7 +44,7 @@
 }
 
 @media (min-width: 1000px) {
-  .header {
+  .page__header {
     display: none;
   }
 }

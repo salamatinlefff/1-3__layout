@@ -19,7 +19,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  font: inherit;
+  font-size: inherit;
 }
 
 img {
@@ -47,6 +47,8 @@ ul, menu {
 
 button {
   cursor: pointer;
+  padding: 0;
+  margin: 0;
   border: none;
   background-color: var(--transparent-background);
 }
@@ -69,12 +71,25 @@ button {
   border: none;
   padding: 0;
   border-radius: 50%;
-  background-color: var(--transparent-background);
+  color: var(--second-background);
+  background-color: var(--buttons-background);
+  transition: transform 0.1s ease-in-out, filter 0.34s ease-in-out;
 }
 
-.button:focus {
-  outline: 2px solid var(--button-focus);
+.button:active {
+  transform: scale(0.9);
 }
+
+.button:hover {
+  filter: hue-rotate(-35deg);
+}
+
+.logo {
+  width: 96px;
+  height: 51px;
+  margin-right: auto;
+}
+
 
 .title {
   position: relative;
@@ -86,10 +101,10 @@ button {
 }
 
 .title::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
-  left: -16px;
+  left: -17px;
   width: 4px;
   height: 100%;
   border-radius: 2px;

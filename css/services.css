@@ -28,6 +28,26 @@
   height: 40px;
 }
 
+.status__button--services {
+  background-color: var(--transparent-background);
+  border-radius: 5px;
+}
+
+.status__button--services:hover .status__img-services {
+  filter: hue-rotate(-35deg);
+}
+
+.status__text {
+  color: var(--main-color);
+}
+
+.status__img-services {
+  border-radius: 50%;
+  background-color: var(--buttons-background);
+  transition: filter 0.34s ease-in-out;
+}
+
+
 .menu__list {
   display: flex;
   overflow-x: scroll;
@@ -43,15 +63,6 @@
   letter-spacing: -0.2px;
   border-radius: 6px;
   color: var(--second-color);
-}
-
-.status__button--services {
-  border-radius: 5px;
-}
-
-.menu__button:focus {
-  outline-offset: -2px;
-  outline: 2px solid var(--burger-line-focus);
 }
 
 .menu__button--active {
@@ -102,10 +113,6 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
-}
-
-.about__button-continue:focus {
-    outline: 2px solid var(--button-focus);
 }
 
 .about__button-continue--img {
