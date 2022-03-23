@@ -37,7 +37,7 @@
   background-color: var(--separator-background);
 }
 
-.burger-menu--line {
+.burger-menu__line {
     position: absolute;
     top: 19px;
     left: 12px;
@@ -48,8 +48,8 @@
     transition: transform 0.34s linear;
 }
 
-.burger-menu--line::before,
-.burger-menu--line::after {
+.burger-menu__line::before,
+.burger-menu__line::after {
     content: "";
     position: absolute;
     left: 0;
@@ -59,12 +59,12 @@
     background-color: var(--burger-line);
 }
 
-.burger-menu--line::before {
+.burger-menu__line::before {
     top: -7px;
     width: 18px;
 }
 
-.burger-menu--line::after {
+.burger-menu__line::after {
     bottom: -7px;
     width: 14px;
 }

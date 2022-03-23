@@ -1,29 +1,29 @@
+'use strict'
 
-
-function burgerMenu() {
+const burgerMenu = () => {
   const burgerButton = document.querySelector('.burger-menu');
-  const nav = document.querySelector('.nav');
-  const navWrapper = document.querySelector('.nav__wrapper');
-  const closeButton = document.querySelector('.nav__button-close');
+  const overlay = document.querySelector('.overlay');
+  const aside = document.querySelector('.aside');
+  const asideCloseButton = aside.querySelector('.aside__button-close');
 
   const openMenu = () => {
-    nav.classList.add('nav--active');
-    navWrapper.classList.add('nav__wrapper--active');
+    aside.classList.add('page__aside--active');
+    overlay.classList.add('overlay--active');
   }
 
   const closeMenu = () => {
-    nav.classList.remove('nav--active');
-    navWrapper.classList.remove('nav__wrapper--active');
+    aside.classList.remove('page__aside--active');
+    overlay.classList.remove('overlay--active');
   }
 
-  burgerButton.addEventListener("click", openMenu);
-  closeButton.addEventListener('click', closeMenu);
+  burgerButton.addEventListener('click', openMenu);
+  asideCloseButton.addEventListener('click', closeMenu);
 
-  nav.addEventListener('click', event => {
-    if(event.target.classList.contains('nav')) {
+  overlay.addEventListener('click', event => {
+    if(event.target.classList.contains('overlay')) {
       closeMenu();
     }
   })
-}
+};
 
 burgerMenu();

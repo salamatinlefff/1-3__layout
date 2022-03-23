@@ -1,3 +1,5 @@
+'use strict'
+
 const buttonReadMore = document.querySelector('.about__button-continue');
 const aboutDesc = document.querySelector('.about__desc');
 

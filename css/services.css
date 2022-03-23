@@ -90,12 +90,12 @@
   transition: all 0.34s ease-in-out;
 }
 
-.about__desc--hide-text {
+.about--hide-text {
   height: 90px;
   overflow: hidden;
 }
 
-.about__desc--shadow::after {
+.about--shadow::after {
   position: absolute;
   content: '';
   bottom: 0;
@@ -107,11 +107,11 @@
   transition: background 0.34s ease-in-out;
 }
 
-.about__desc--text--margin-bottom {
+.about__text--margin-bottom {
   margin-bottom: 25px;
 }
 
-.about__button-continue {
+.button-continue {
   display: flex;
   align-items: center;
   padding: 0;
@@ -122,7 +122,7 @@
   letter-spacing: -0.2px;
 }
 
-.about__button-continue--img {
+.button-continue__img {
   color: var(--third-background);
   margin-right: 8px;
 }
