@@ -1,18 +1,18 @@
 'use strict'
 
-const buttonReadMore = document.querySelector('.about__button-continue');
+const aboutButtonContinue = document.querySelector('.about__button-continue');
 const aboutDesc = document.querySelector('.about__desc');
 
 const showAboutInfo = () => {
-  aboutDesc.classList.toggle('about__desc--shadow');
-  aboutDesc.classList.toggle('about__desc--hide-text');
+  aboutDesc.classList.toggle('about--shadow');
+  aboutDesc.classList.toggle('about--hide-text');
 }
 
 const hideButtonReadMore = () => {
-  buttonReadMore.remove()
+  aboutButtonContinue.remove()
 }
 
-buttonReadMore.addEventListener('click', () => {
+aboutButtonContinue.addEventListener('click', () => {
   showAboutInfo()
   hideButtonReadMore()
 })
