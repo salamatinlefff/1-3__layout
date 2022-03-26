@@ -1,6 +1,7 @@
 .idea
 .cspell
 .vscode
+.gitignore
 about.fig
 mobile_menu.fig
 site.fig

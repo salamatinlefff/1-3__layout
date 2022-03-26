@@ -11,9 +11,13 @@ const showHideContent = () => {
       
       this.activeContent = true;
     },
-    hideContent(container, textButton) {
+    hideContent(container, textButton, aboutContent) {
+      if(aboutContent) {
+        textButton.textContent = 'Читать далее';
+      } else {
+        textButton.textContent = 'Показать все';
+      }
       container.style.height = ``;
-      textButton.textContent = 'Показать все';
     
       this.activeContent = false;
     }
