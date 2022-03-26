@@ -1,4 +1,6 @@
 .idea
+.cspell
+.vscode
 about.fig
 mobile_menu.fig
 site.fig
