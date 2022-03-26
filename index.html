@@ -6,9 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Мы являемся авторизованным сервисным центром по ремонту техники Dell">
   <meta name="keywords" content="ремонт, техники, Dell">
-  <meta property="og:image" content="./assets/img/logo.svg">
 
-  <title>Services</title>
+  <meta property="og:image" content="https://i.ibb.co/Fw1nXxZ/logo.png">
+  <meta property="og:description" content="Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.">
+  <meta property="og:title" content="CPS - сервисный центр по ремонту техники">
+
+  
+
+  <title>CPS - сервисный центр по ремонту техники</title>
 
   <link href="./assets/img/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
   <link href="./assets/img/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
@@ -19,15 +24,21 @@
   <meta content="#ffffff" name="theme-color">
 
   <link href="./css/normalize.css" rel="stylesheet">
+  <link href="./css/swiper-bundle.min.css" rel="stylesheet">
   <link href="./css/fonts.css" rel="stylesheet">
   <link href="./css/default.css" rel="stylesheet">
   <link href="./css/burger.css" rel="stylesheet">
   <link href="./css/header.css" rel="stylesheet">
+  <link href="./css/aside.css" rel="stylesheet">
   <link href="./css/services.css" rel="stylesheet">
-  <link href="./css/nav.css" rel="stylesheet">
+  <link href="./css/menu.css" rel="stylesheet">
+  <link href="./css/about.css" rel="stylesheet">
+  <link href="./css/brands.css" rel="stylesheet">
 
+  <script type="module" src="./scripts/swiper-bundle.esm.browser.min.js"></script>
+  <script type="module" src="./scripts/swiper.js"></script>
   <script defer src="./scripts/burger.js"></script>
-  <script defer src="./scripts/index.js"></script>
+  <script defer src="./scripts/about.js"></script>
 
 </head>
 
@@ -184,10 +195,11 @@
   </aside>
 
   <main class="page__main main">
+    <h1 class="visually-hidden">Авторизованный сервисный центр по ремонту техники различных брендов</h1>
     <section class="main__services services">
-      <header class="services__header">
+      <header class="services__header header">
         <h2 class="services__title title">Услуги и сервисы</h2>
-          <ul class="status status--hidden" hidden>
+          <ul class="services__status status status--hidden" hidden>
 
             <li class="status__item">
               <button class="status__button button status__button--services" aria-label="Оставить заявку">
@@ -249,12 +261,177 @@
 
         <button class="about__button-continue button-continue" aria-label="Читать далее">
           <svg class="button-continue__img" width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 7.5 12 10 9.5 7.5a.707.707 0 1 0-1 1l2.793 2.793a1 1 0 0 0 1.414 0L15.5 8.5a.707.707 0 0 0-1-1Zm0 6L12 16l-2.5-2.5a.707.707 0 1 0-1 1l2.793 2.793a1 1 0 0 0 1.414 0L15.5 14.5a.707.707 0 0 0-1-1Z" fill="currentColor"/></svg>
-          Читать далее</button>
+          Читать далее
+        </button>
         </div>
 
         <div class="about__img-wrapper">
           <img class="about__img" src="./assets/img/shedule.jpg" alt="График работы компании CPS и логотип компании" width="530" height="380">
         </div>
+      </section>
+
+      <section class="services__brands brands">
+        <h3 class="brands__title">Ремонт техники различных брендов</h3>
+
+        <div class="swiper-container">
+          <ul class="brands__list swiper-wrapper">
+            
+            <li class="brands__item swiper-slide">
+              <div class="brands__wrapper-logo">
+                <img class="brands__logo" src="./assets/img/lenovo-logo.png" alt="Логотип компании Леново">
+              </div>
+
+              <button class="brands__button" aria-label="Подробнее о бренде">
+                <svg class="brands__button-arrow" width="40" height="40" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m21.5 20-3.793-3.793a1 1 0 0 1 0-1.414l.086-.086a1 1 0 0 1 1.414 0l4.586 4.586a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-.086-.086a1 1 0 0 1 0-1.414L21.5 20Z" fill="currentColor"/></svg>
+              </button>
+            </li>
+
+            <li class="brands__item swiper-slide">
+              <div class="brands__wrapper-logo">
+                <img class="brands__logo" src="./assets/img/samsung-logo.png" alt="Логотип компании Леново">
+              </div>
+
+              <button class="brands__button" aria-label="Подробнее о бренде">
+                <svg class="brands__button-arrow" width="40" height="40" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m21.5 20-3.793-3.793a1 1 0 0 1 0-1.414l.086-.086a1 1 0 0 1 1.414 0l4.586 4.586a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-.086-.086a1 1 0 0 1 0-1.414L21.5 20Z" fill="currentColor"/></svg>
+              </button>
+            </li>
+
+            <li class="brands__item swiper-slide">
+              <div class="brands__wrapper-logo">
+                <img class="brands__logo" src="./assets/img/apple-logo.png" alt="Логотип компании Леново">
+              </div>
+
+              <button class="brands__button" aria-label="Подробнее о бренде">
+                <svg class="brands__button-arrow" width="40" height="40" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m21.5 20-3.793-3.793a1 1 0 0 1 0-1.414l.086-.086a1 1 0 0 1 1.414 0l4.586 4.586a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-.086-.086a1 1 0 0 1 0-1.414L21.5 20Z" fill="currentColor"/></svg>
+              </button>
+            </li>
+
+            <li class="brands__item swiper-slide">
+              <div class="brands__wrapper-logo">
+                <img class="brands__logo" src="./assets/img/view-sonic-logo.png" alt="Логотип компании Леново">
+              </div>
+
+              <button class="brands__button" aria-label="Подробнее о бренде">
+                <svg class="brands__button-arrow" width="40" height="40" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m21.5 20-3.793-3.793a1 1 0 0 1 0-1.414l.086-.086a1 1 0 0 1 1.414 0l4.586 4.586a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-.086-.086a1 1 0 0 1 0-1.414L21.5 20Z" fill="currentColor"/></svg>
+              </button>
+            </li>
+
+            <li class="brands__item swiper-slide">
+              <div class="brands__wrapper-logo">
+                <img class="brands__logo" src="./assets/img/bosh-logo.png" alt="Логотип компании Леново">
+              </div>
+
+              <button class="brands__button" aria-label="Подробнее о бренде">
+                <svg class="brands__button-arrow" width="40" height="40" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m21.5 20-3.793-3.793a1 1 0 0 1 0-1.414l.086-.086a1 1 0 0 1 1.414 0l4.586 4.586a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-.086-.086a1 1 0 0 1 0-1.414L21.5 20Z" fill="currentColor"/></svg>
+              </button>
+            </li>
+
+            <li class="brands__item swiper-slide">
+              <div class="brands__wrapper-logo">
+                <img class="brands__logo" src="./assets/img/hp-logo.png" alt="Логотип компании Леново">
+              </div>
+
+              <button class="brands__button" aria-label="Подробнее о бренде">
+                <svg class="brands__button-arrow" width="40" height="40" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m21.5 20-3.793-3.793a1 1 0 0 1 0-1.414l.086-.086a1 1 0 0 1 1.414 0l4.586 4.586a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-.086-.086a1 1 0 0 1 0-1.414L21.5 20Z" fill="currentColor"/></svg>
+              </button>
+            </li>
+
+            <li class="brands__item swiper-slide">
+              <div class="brands__wrapper-logo">
+                <img class="brands__logo" src="./assets/img/acer-logo.png" alt="Логотип компании Леново">
+              </div>
+
+              <button class="brands__button" aria-label="Подробнее о бренде">
+                <svg class="brands__button-arrow" width="40" height="40" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m21.5 20-3.793-3.793a1 1 0 0 1 0-1.414l.086-.086a1 1 0 0 1 1.414 0l4.586 4.586a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-.086-.086a1 1 0 0 1 0-1.414L21.5 20Z" fill="currentColor"/></svg>
+              </button>
+            </li>
+
+            <li class="brands__item swiper-slide">
+              <div class="brands__wrapper-logo">
+                <img class="brands__logo" src="./assets/img/sony-logo.png" alt="Логотип компании Леново">
+              </div>
+
+              <button class="brands__button" aria-label="Подробнее о бренде">
+                <svg class="brands__button-arrow" width="40" height="40" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m21.5 20-3.793-3.793a1 1 0 0 1 0-1.414l.086-.086a1 1 0 0 1 1.414 0l4.586 4.586a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-.086-.086a1 1 0 0 1 0-1.414L21.5 20Z" fill="currentColor"/></svg>
+              </button>
+            </li>
+
+            <li class="brands__item swiper-slide">
+              <div class="brands__wrapper-logo">
+                <img class="brands__logo" src="./assets/img/lenovo-logo.png" alt="Логотип компании Леново">
+              </div>
+
+              <button class="brands__button" aria-label="Подробнее о бренде">
+                <svg class="brands__button-arrow" width="40" height="40" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m21.5 20-3.793-3.793a1 1 0 0 1 0-1.414l.086-.086a1 1 0 0 1 1.414 0l4.586 4.586a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-.086-.086a1 1 0 0 1 0-1.414L21.5 20Z" fill="currentColor"/></svg>
+              </button>
+            </li>
+            
+            <li class="brands__item swiper-slide">
+              <div class="brands__wrapper-logo">
+                <img class="brands__logo" src="./assets/img/samsung-logo.png" alt="Логотип компании Леново">
+              </div>
+
+              <button class="brands__button" aria-label="Подробнее о бренде">
+                <svg class="brands__button-arrow" width="40" height="40" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m21.5 20-3.793-3.793a1 1 0 0 1 0-1.414l.086-.086a1 1 0 0 1 1.414 0l4.586 4.586a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-.086-.086a1 1 0 0 1 0-1.414L21.5 20Z" fill="currentColor"/></svg>
+              </button>
+            </li>
+
+            <li class="brands__item swiper-slide">
+              <div class="brands__wrapper-logo">
+                <img class="brands__logo" src="./assets/img/apple-logo.png" alt="Логотип компании Леново">
+              </div>
+
+              <button class="brands__button" aria-label="Подробнее о бренде">
+                <svg class="brands__button-arrow" width="40" height="40" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m21.5 20-3.793-3.793a1 1 0 0 1 0-1.414l.086-.086a1 1 0 0 1 1.414 0l4.586 4.586a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-.086-.086a1 1 0 0 1 0-1.414L21.5 20Z" fill="currentColor"/></svg>
+              </button>
+            </li>
+
+          </ul>
+        </div>
+        <ul class="brands__swiper-nav swiper-nav">
+          <li class="swiper-nav__item">
+            <button class="swiper-nav__button"></button>
+          </li>
+          
+
+          <li class="swiper-nav__item">
+            <button class="swiper-nav__button"></button>
+          </li>
+
+          <li class="swiper-nav__item">
+            <button class="swiper-nav__button"></button>
+          </li>
+
+          <li class="swiper-nav__item">
+            <button class="swiper-nav__button"></button>
+          </li>
+
+          <li class="swiper-nav__item">
+            <button class="swiper-nav__button"></button>
+          </li>
+
+          <li class="swiper-nav__item">
+            <button class="swiper-nav__button"></button>
+          </li>
+
+          <li class="swiper-nav__item">
+            <button class="swiper-nav__button"></button>
+          </li>
+
+          <li class="swiper-nav__item">
+            <button class="swiper-nav__button"></button>
+          </li>
+
+          <li class="swiper-nav__item">
+            <button class="swiper-nav__button"></button>
+          </li>
+
+        </ul>
+
+        <button class="brands__button-continue button-continue" aria-label="Читать далее">
+          <svg class="button-continue__img" width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 7.5 12 10 9.5 7.5a.707.707 0 1 0-1 1l2.793 2.793a1 1 0 0 0 1.414 0L15.5 8.5a.707.707 0 0 0-1-1Zm0 6L12 16l-2.5-2.5a.707.707 0 1 0-1 1l2.793 2.793a1 1 0 0 0 1.414 0L15.5 14.5a.707.707 0 0 0-1-1Z" fill="currentColor"/></svg>
+          Показать все
+        </button>
       </section>
     </section>
 

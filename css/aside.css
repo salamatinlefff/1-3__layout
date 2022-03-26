@@ -22,15 +22,20 @@
 }
 
 .page__aside {
-  transform: translateX(-100%);
+  transform: translateX(-100%) scale(0);
+  transform-origin: 0 50%;
 }
 
 .aside--active {
-  transform: translateX(0);
+  transform: translateX(0) scale(1);
   filter: drop-shadow(16px 0px 32px rgba(14, 24, 80, 0.2));
 }
 
 .aside__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 16px;
   padding: 0;
   margin-bottom: 22px;
 }
@@ -93,7 +98,9 @@
 }
 
 .switch-language__label {
+  cursor: pointer;
   text-transform: uppercase;
+  transition: color 0.2s ease-in-out;
 }
 
 .switch-language__button {
@@ -110,3 +117,10 @@
     max-width: 320px;
   }
 }
+
+@media (min-width: 580px) {
+  .aside__header {
+    margin-bottom: 48px;
+  }
+}
+

@@ -1,0 +1,32 @@
+.swiper-container {
+  overflow: hidden;
+}
+
+.brands__list {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+}
+
+.brands__item {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 240px;
+}
+
+@media (min-width: 580px) {
+  .swiper-container {
+    overflow: auto;
+  }
+
+  .brands__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .brands__item {
+    flex-basis: 224px;
+
+  }
+  
+}

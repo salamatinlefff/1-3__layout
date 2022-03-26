@@ -73,7 +73,7 @@ button {
   border-radius: 50%;
   color: var(--second-background);
   background-color: var(--buttons-background);
-  transition: transform 0.1s ease-in-out, filter 0.34s ease-in-out;
+  transition: transform 0.1s ease-in-out, opacity 0.34s ease-in-out;
 }
 
 .button:active {
@@ -81,7 +81,7 @@ button {
 }
 
 .button:hover {
-  filter: hue-rotate(-35deg);
+  opacity: 0.8;
 }
 
 .logo {
@@ -97,7 +97,6 @@ button {
   font-weight: 700;
   line-height: 40px;
   letter-spacing: -0.6px;
-  margin-bottom: 24px;
 }
 
 .title::before {
@@ -109,6 +108,23 @@ button {
   height: 100%;
   border-radius: 2px;
   background-color: var(--third-background);
+}
+
+
+.button-continue {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  min-width: 132px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.button-continue__img {
+  color: var(--third-background);
+  margin-right: 8px;
 }
 
 
@@ -135,8 +151,8 @@ button {
 }
 
 @media (min-width: 580px) {
-  .title {
-    margin-bottom: 30px;
+  .title::before {
+    left: -25px;
   }
 }
 
