@@ -24,7 +24,7 @@
   width: 2px;
   height: 32px;
   border-radius: 1px;
-  background-color: var(--separator-background);
+  background-color: var(--fourth-background);
 }
 
 @media (min-width: 580px) {

@@ -34,7 +34,7 @@
   width: 2px;
   height: 32px;
   border-radius: 1px;
-  background-color: var(--separator-background);
+  background-color: var(--fourth-background);
 }
 
 .burger-menu__line {
@@ -67,4 +67,14 @@
 .burger-menu__line::after {
     bottom: -7px;
     width: 14px;
+}
+
+@media (min-width: 580px) {
+  .burger-menu {
+    margin-right: 43px;
+  }
+
+  .burger-menu::before {
+    content: '';
+  }
 }

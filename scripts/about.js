@@ -1,18 +1,19 @@
 'use strict'
 
-const aboutButtonContinue = document.querySelector('.about__button-continue');
-const aboutDesc = document.querySelector('.about__desc');
+const about = () => {
+  const aboutDesc = document.querySelector('.about__desc');
+  const aboutButtonShowContent = document.querySelector('.about__button-show-content');
+  const aboutButtonShowContentText = aboutButtonShowContent.querySelector('.button-show-content__text--about');
 
-const showAboutInfo = () => {
-  aboutDesc.classList.remove('about--shadow');
-  aboutDesc.classList.remove('about--hide-text');
-};
+  let aboutContent = showHideContent();
+  
+    aboutButtonShowContent.addEventListener('click', () => {
+      if (!aboutContent.activeContent) {
+        aboutContent.showContent(aboutDesc, aboutButtonShowContentText);
+      } else {
+        aboutContent.hideContent(aboutDesc, aboutButtonShowContentText);
+      }
+    });
+}
 
-const hideButtonReadMore = () => {
-  aboutButtonContinue.remove();
-};
-
-aboutButtonContinue.addEventListener('click', () => {
-  showAboutInfo();
-  hideButtonReadMore();
-});
+about();

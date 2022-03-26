@@ -12,30 +12,14 @@
 
 .about__desc {
   position: relative;
-  height: max-content;
+  overflow: hidden;
+  height: 90px;
   padding-right: 16px;
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.2px;
   margin-bottom: 16px;
-  transition: all 0.34s ease-in-out;
-}
-
-.about--hide-text {
-  height: 90px;
-  overflow: hidden;
-}
-
-.about--shadow::after {
-  position: absolute;
-  content: '';
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: block;
-  background-image: linear-gradient(0deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
-  height: 40px;
-  transition: background-image 0.34s ease-in-out;
+  transition: height 0.34s ease-in-out;
 }
 
 .about__text--margin-bottom {
@@ -66,14 +50,11 @@
   }
 
   .about__desc {
+    height: 160px;
     line-height: 20px;
     margin-bottom: 10px;
   }
   
-  .about__desc--hide-text {
-    height: 160px;
-  }
-
   .about__img {
     border-radius: 6px;
   }
@@ -82,10 +63,6 @@
 @media (min-width: 1000px) {
   .services__about {
     margin-bottom: 51px;
-  }
-
-  .about__desc::after {
-    content: none;
   }
 
   .about__info {

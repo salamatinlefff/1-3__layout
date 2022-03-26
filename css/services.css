@@ -19,11 +19,11 @@
 }
 
 .status__button--services:hover {
-  opacity: 1;
+  background-color: transparent;
 }
 
 .status__button--services:hover .status__img-services {
-  opacity: 0.8;
+  background-color: var(--button-focus);
 }
 
 .status__text {
@@ -33,7 +33,7 @@
 .status__img-services {
   border-radius: 50%;
   background-color: var(--buttons-background);
-  transition: opacity 0.34s ease-in-out;
+  transition: transform 0.1s ease-in-out, background-color 0.34s ease-in-out;
 }
 
 .status--hidden {

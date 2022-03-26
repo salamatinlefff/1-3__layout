@@ -5,10 +5,12 @@
   --main-background: #F8F8F8;
   --second-background: #FFFFFF;
   --third-background: #41F6D7;
+  --fourth-background: #EAEAEA;
+  --fifth-background: #DDDDDD;
+  --sixth-background: #B5B6BC;
   --transparent-background: transparent;
-  --separator-background: #EAEAEA;
   --active-tab-border: #B8FFEC;
-  --button-focus: #b4278e;;
+  --button-focus: #b4278e;
 }
 
 html {
@@ -73,7 +75,7 @@ button {
   border-radius: 50%;
   color: var(--second-background);
   background-color: var(--buttons-background);
-  transition: transform 0.1s ease-in-out, opacity 0.34s ease-in-out;
+  transition: transform 0.1s ease-in-out, background-color 0.34s ease-in-out;
 }
 
 .button:active {
@@ -81,7 +83,7 @@ button {
 }
 
 .button:hover {
-  opacity: 0.8;
+  background-color: var(--button-focus);
 }
 
 .logo {
@@ -89,7 +91,6 @@ button {
   height: 51px;
   margin-right: auto;
 }
-
 
 .title {
   position: relative;
@@ -110,8 +111,7 @@ button {
   background-color: var(--third-background);
 }
 
-
-.button-continue {
+.button-show-content {
   display: flex;
   align-items: center;
   padding: 0;
@@ -122,11 +122,10 @@ button {
   letter-spacing: -0.2px;
 }
 
-.button-continue__img {
+.button-show-content__img {
   color: var(--third-background);
   margin-right: 8px;
 }
-
 
 [hidden] {
   display: none;
