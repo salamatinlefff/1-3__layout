@@ -125,6 +125,7 @@ button {
 .button-show-content__img {
   color: var(--third-background);
   margin-right: 8px;
+  transition: transform 0.34s ease-in-out;
 }
 
 [hidden] {

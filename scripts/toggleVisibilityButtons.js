@@ -19,7 +19,7 @@ const showButton = button => {
   button.style.display = '';
 }
 
-const hideButtons = () => {
+const toggleVisibilityButtons = () => {
   isEnoughHeight('About');
   isEnoughHeight('Brands');
 
@@ -29,4 +29,4 @@ window.addEventListener('resize', () => {
 });
 }
 
-hideButtons();
+toggleVisibilityButtons();
