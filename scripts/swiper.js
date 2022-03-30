@@ -1,21 +1,18 @@
-'use strict'
-
 const swiper = () => {
-  const breakpoint = window.matchMedia( '(min-width:580px)' );
+  const breakpoint = window.matchMedia('(min-width:580px)');
   let mySwiper;
 
   const breakpointChecker = () => {
-    if ( breakpoint.matches === true ) {
-        if ( mySwiper !== undefined ) {
-          mySwiper.destroy( true, true );
-        }
-        return;
-    } else if ( breakpoint.matches === false ) {
-        return enableSwiper();
+    if (breakpoint.matches === true) {
+      if (mySwiper !== undefined) {
+        mySwiper.destroy(true, true);
+      }
+    } else if (breakpoint.matches === false) {
+      return enableSwiper();
     }
   };
   const enableSwiper = () => {
-    mySwiper = new Swiper ('.swiper', {
+    mySwiper = new Swiper('.swiper', {
       loop: true,
       slidesPerView: 'auto',
       spaceBetween: 16,
@@ -33,6 +30,6 @@ const swiper = () => {
 
   breakpoint.addEventListener('change', breakpointChecker);
   breakpointChecker();
-}
+};
 
 swiper();

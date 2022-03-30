@@ -17,7 +17,7 @@ const about = () => {
       } else {
         aboutContent.hideContent(aboutDesc, aboutButtonShowContentImg, aboutButtonShowContentText, { aboutContent: true });
       }
-    });
-}
+  });
+};
 
 about();

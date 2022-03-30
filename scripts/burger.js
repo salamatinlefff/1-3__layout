@@ -1,5 +1,3 @@
-'use strict'
-
 const burgerMenu = () => {
   const burgerButton = document.querySelector('.burger-menu');
   const overlay = document.querySelector('.overlay');
@@ -9,21 +7,21 @@ const burgerMenu = () => {
   const openMenu = () => {
     aside.classList.add('aside--active');
     overlay.classList.add('overlay--active');
-  }
+  };
 
   const closeMenu = () => {
     aside.classList.remove('aside--active');
     overlay.classList.remove('overlay--active');
-  }
+  };
 
   burgerButton.addEventListener('click', openMenu);
   asideButtonClose.addEventListener('click', closeMenu);
 
-  overlay.addEventListener('click', event => {
-    if(event.target.classList.contains('overlay')) {
+  overlay.addEventListener('click', (event) => {
+    if (event.target.classList.contains('overlay')) {
       closeMenu();
     }
-  })
+  });
 };
 
 burgerMenu();

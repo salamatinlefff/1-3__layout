@@ -2,6 +2,9 @@
 .cspell
 .vscode
 .gitignore
+.eslintrc
+package-lock.json
+node_modules
 about.fig
 mobile_menu.fig
 site.fig
