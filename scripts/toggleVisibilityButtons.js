@@ -20,16 +20,22 @@ const toggleVisibilityButtons = () => {
     }
   };
 
-  isEnoughHeight('About');
-  isEnoughHeight('Brands');
+  const checkWidth = () => {
+    isEnoughHeight('About');
+      console.log('dn');
+    isEnoughHeight('Brands');
+  };
+
+  checkWidth()
 
   const minWidth1000 = window.matchMedia('(min-width: 1000px)');
 
   minWidth1000.addEventListener('change', () => {
-    window.addEventListener('resize', () => {
-      isEnoughHeight('About');
-      isEnoughHeight('Brands');
-    });
+    if (minWidth1000.matches) {
+      window.addEventListener('resize', checkWidth);
+    } else {
+      window.removeEventListener('resize', checkWidth);
+    }
   });
 };
 
