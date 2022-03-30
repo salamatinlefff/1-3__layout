@@ -22,7 +22,6 @@ const toggleVisibilityButtons = () => {
 
   const checkWidth = () => {
     isEnoughHeight('About');
-      console.log('dn');
     isEnoughHeight('Brands');
   };
 
