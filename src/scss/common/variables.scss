@@ -1,0 +1,33 @@
+$default-font: 'TT Lakes', sans-serif;
+
+$main-color: #1B1C21;
+$second-color: #7E7E82;
+$main-bg: #F8F8F8;
+$second-bg: #FFFFFF;
+$third-bg: #41F6D7;
+$fourth-bg: #EAEAEA;
+$fifth-bg: #DDDDDD;
+$sixth-bg: #B5B6BC;
+$overlay-bg: rgba(255, 255, 255, 0.9);
+$aside-shadow-bg:rgba(14, 24, 80, 0.2);
+$transparent-bg: transparent;
+$active-tab-border: #B8FFEC;
+$buttons-bg: #FF3E79;
+$buttons-focus: #b4278e;
+$burger-line: #ffffff;
+$burger-line-focus: #b4278e;
+$burger-background: #FF3E79;
+$burger-line-active: transparent;
+
+$breakpoint_xs: 360px;
+$breakpoint_sm: 576px;
+$breakpoint_md: 992px;
+
+
+  @media (min-width: $breakpoint_sm) {
+
+  }
+  
+  @media (min-width: $breakpoint_md) {
+
+  }

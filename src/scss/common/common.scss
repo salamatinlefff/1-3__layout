@@ -1,27 +1,19 @@
-:root {
-  --buttons-background: #FF3E79;
-  --main-color: #1B1C21;
-  --second-color: #7E7E82;
-  --main-background: #F8F8F8;
-  --second-background: #FFFFFF;
-  --third-background: #41F6D7;
-  --fourth-background: #EAEAEA;
-  --fifth-background: #DDDDDD;
-  --sixth-background: #B5B6BC;
-  --transparent-background: transparent;
-  --active-tab-border: #B8FFEC;
-  --button-focus: #b4278e;
-}
-
 html {
   box-sizing: border-box;
+  background-color: $main-bg;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
-  font-size: inherit;
+}
+
+body {
+  font-family: $default-font;
+  line-height: 20px;
+  letter-spacing: -0.2px;
+  color: #1B1C21;
 }
 
 img {
@@ -48,11 +40,11 @@ ul, menu {
 }
 
 button {
-  cursor: pointer;
   padding: 0;
   margin: 0;
   border: none;
-  background-color: var(--transparent-background);
+  cursor: pointer;
+  background-color: $transparent-bg;
 }
 
 .visually-hidden {
@@ -73,17 +65,17 @@ button {
   border: none;
   padding: 0;
   border-radius: 50%;
-  color: var(--second-background);
-  background-color: var(--buttons-background);
+  color: $second-bg;
+  background-color: $buttons-bg;
   transition: transform 0.1s ease-in-out, background-color 0.34s ease-in-out;
-}
 
-.button:active {
-  transform: scale(0.9);
-}
+  &:active {
+    transform: scale(0.9);
+  }
 
-.button:hover {
-  background-color: var(--button-focus);
+  &:hover {
+    background-color: $buttons-focus;
+  }
 }
 
 .logo {
@@ -98,17 +90,32 @@ button {
   font-weight: 700;
   line-height: 40px;
   letter-spacing: -0.6px;
-}
 
-.title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -17px;
-  width: 4px;
-  height: 100%;
-  border-radius: 2px;
-  background-color: var(--third-background);
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -17px;
+    width: 4px;
+    height: 100%;
+    border-radius: 2px;
+    background-color: $third-bg;
+  }
+
+  @media (min-width: $breakpoint_sm) {
+    &::before {
+      left: -25px;
+    }
+  }
+  @media (min-width: $breakpoint_md) {
+    &{
+      margin: 0;
+    }
+
+    &::before {
+      left: -32px;
+    }
+  }
 }
 
 .button-show-content {
@@ -120,12 +127,12 @@ button {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
-}
 
-.button-show-content__img {
-  color: var(--third-background);
-  margin-right: 8px;
-  transition: transform 0.34s ease-in-out;
+  &__img {
+    color: $third-bg;
+    margin-right: 8px;
+    transition: transform 0.34s ease-in-out;
+  }
 }
 
 [hidden] {
@@ -138,30 +145,14 @@ button {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.9);
-  z-index: 1;
+  background-color: $overlay-bg;
+  z-index: 2;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.34s ease-in-out;
-}
 
-.overlay--active {
-  opacity: 1;
-  pointer-events: all;
-}
-
-@media (min-width: 580px) {
-  .title::before {
-    left: -25px;
-  }
-}
-
-@media (min-width: 1000px) {
-  .title {
-    margin: 0;
-  }
-
-  .title::before {
-    left: -32px;
+  &--active {
+    opacity: 1;
+    pointer-events: all;
   }
 }

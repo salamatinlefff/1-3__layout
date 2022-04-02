@@ -1,10 +1,7 @@
 .idea
 .cspell
 .vscode
-.gitignore
-.eslintrc
+.eslintignore
 package-lock.json
 node_modules
-about.fig
-mobile_menu.fig
-site.fig
+dist
