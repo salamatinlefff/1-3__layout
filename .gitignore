@@ -1,7 +1,6 @@
 .idea
 .cspell
 .vscode
-.eslintignore
 package-lock.json
 node_modules
 dist
