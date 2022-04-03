@@ -1,26 +1,39 @@
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+
 let mode = 'development';
+
 
 if (process.env.NODE_ENV === 'production') {
   mode = 'production';
 }
 
+function isProd(prod, dev) {
+  return (mode === 'production' ? prod : dev);
+}
+
 module.exports = {
   mode: mode,
-  entry: './src/index.js',
+  entry: {
+    main: path.resolve(__dirname, 'src/index.js'),
+  },
   output: {
-    filename: '[name].[contenthash].js',
-    assetModuleFilename: 'assets/[hash][ext][query]',
+    filename: isProd('[name].[contenthash].js', '[name].js'),
+    assetModuleFilename: 'assets/[contenthash][ext][query]',
     clean: true,
   },
   devServer: {
     open: true,
     static: {
-      directory: './dist',
+      directory: path.resolve(__dirname, 'src'),
       watch: true,
     },
+  },
+  watchOptions: {
+    aggregateTimeout: 300,
+    poll: 1000,
   },
   devtool: 'source-map',
   optimization: {
@@ -30,10 +43,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: path.resolve(__dirname, 'src/index.html'),
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
+      filename: isProd('[name].[contenthash].css', '[name].css'),
     }),
   ],
   module: {
@@ -45,7 +58,7 @@ module.exports = {
       {
         test: /\.(sa|sc|c)ss$/i,
         use: [
-          MiniCssExtractPlugin.loader,
+          isProd(MiniCssExtractPlugin.loader, 'style-loader'),
           'css-loader',
           {
             loader: 'postcss-loader',
@@ -67,10 +80,8 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif|webp|awif|ico)$/i,
-        type: 'asset/resource',
-        generator: {
-          filename: 'assets/img/[hash][ext][query]',
-        },
+        type: isProd('asset/resource','asset/inline') ,
+        generator: isProd({filename: 'assets/img/[hash][ext][query]'}, {})
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
