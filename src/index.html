@@ -164,135 +164,124 @@
     <div class="page__overlay overlay"></div>
 
     <aside class="page__aside aside">
-      <header class="aside__header header">
-        <button class="aside__button-close button" aria-label="Закрыть меню">
-          <svg
-            fill="currentColor"
-            height="40"
-            width="40"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M13.793 12.257a1 1 0 0 0-1.414 0l-.122.122a1 1 0 0 0 0 1.415L18.464 20l-6.207 6.206a1 1 0 0 0 0 1.415l.122.122a1 1 0 0 0 1.415 0L20 21.536l6.206 6.207a1 1 0 0 0 1.415 0l.122-.122a1 1 0 0 0 0-1.415L21.536 20l6.207-6.207a1 1 0 0 0 0-1.414l-.122-.122a1 1 0 0 0-1.415 0L20 18.464l-6.207-6.207Z"
+      <div class="aside__wrapper">
+        <header class="aside__header header">
+          <button class="aside__button-close button" aria-label="Закрыть меню">
+            <svg
               fill="currentColor"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </button>
-
-        <div class="aside__logo logo">
-          <img
-            class="logo__img"
-            alt="Логотип компании CPS"
-            height="52"
-            src="./assets/img/logo.svg"
-            width="98"
-          />
-        </div>
-
-        <button class="aside__button-search button" aria-label="Поиск по меню">
-          <svg
-            fill="currentColor"
-            height="40"
-            width="40"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M23.5 22h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.26 4.25c.41.41 1.07.41 1.48 0l.01-.01c.41-.41.41-1.07 0-1.48L23.5 22Zm-6 0c-2.49 0-4.5-2.01-4.5-4.5s2.01-4.5 4.5-4.5 4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5Z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </button>
-      </header>
-
-      <nav class="aside__nav nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <button class="nav__button">Ремонт техники</button>
-          </li>
-
-          <li class="nav__item">
-            <button class="nav__button nav__button--active">
-              Услуги и сервисы
-            </button>
-          </li>
-
-          <li class="nav__item">
-            <button class="nav__button">Корпоративным клиентам</button>
-          </li>
-
-          <li class="nav__item">
-            <button class="nav__button">Продавцам техники</button>
-          </li>
-
-          <li class="nav__item">
-            <button class="nav__button">Партнерам</button>
-          </li>
-
-          <li class="nav__item">
-            <button class="nav__button">Производителям</button>
-          </li>
-
-          <li class="nav__item">
-            <button class="nav__button">Наши сервисные центры</button>
-          </li>
-
-          <li class="nav__item">
-            <button class="nav__button">Контакты</button>
-          </li>
-        </ul>
-      </nav>
-
-      <footer class="aside__footer">
-        <ul class="aside__contacts contacts">
-          <li class="contacts__item">
-            <button class="contacts__button button" aria-label="Позвонить">
-              <svg
-                class="contacts__img"
-                fill="currentColor"
-                height="40"
-                width="40"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="m12.76 23.25 2.54-.29c.61-.07 1.21.14 1.64.57l1.84 1.84c2.83-1.44 5.15-3.75 6.59-6.59l-1.85-1.85a1.99 1.99 0 0 1-.57-1.64l.29-2.52c.12-1.01.97-1.77 1.99-1.77h1.73c1.13 0 2.07.94 2 2.07-.53 8.54-7.36 15.36-15.89 15.89-1.13.07-2.07-.87-2.07-2v-1.73c-.01-1.01.75-1.86 1.76-1.98Z"
-                  fill="currentColor"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </button>
-          </li>
-
-          <li class="contacts__item">
-            <button
-              class="contacts__button button"
-              aria-label="Написать сообщение"
+              height="40"
+              width="40"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                class="contacts__img"
+              <path
+                clip-rule="evenodd"
+                d="M13.793 12.257a1 1 0 0 0-1.414 0l-.122.122a1 1 0 0 0 0 1.415L18.464 20l-6.207 6.206a1 1 0 0 0 0 1.415l.122.122a1 1 0 0 0 1.415 0L20 21.536l6.206 6.207a1 1 0 0 0 1.415 0l.122-.122a1 1 0 0 0 0-1.415L21.536 20l6.207-6.207a1 1 0 0 0 0-1.414l-.122-.122a1 1 0 0 0-1.415 0L20 18.464l-6.207-6.207Z"
                 fill="currentColor"
-                height="40"
-                width="40"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="M28 11H12c-1.1 0-1.99.9-1.99 2L10 31l4-5h14c1.1 0 2-.9 2-2V13c0-1.1-.9-2-2-2Zm-7 11h-6c-.55 0-1-.45-1-1s.45-1 1-1h6c.55 0 1 .45 1 1s-.45 1-1 1Zm4-5H15c-.55 0-1-.45-1-1s.45-1 1-1h10c.55 0 1 .45 1 1s-.45 1-1 1Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+
+          <div class="aside__logo logo">
+            <img
+              class="logo__img"
+              alt="Логотип компании CPS"
+              height="52"
+              src="./assets/img/logo.svg"
+              width="98"
+            />
+          </div>
+
+          <button
+            class="aside__button-search button"
+            aria-label="Поиск по меню"
+          >
+            <svg
+              fill="currentColor"
+              height="40"
+              width="40"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M23.5 22h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.26 4.25c.41.41 1.07.41 1.48 0l.01-.01c.41-.41.41-1.07 0-1.48L23.5 22Zm-6 0c-2.49 0-4.5-2.01-4.5-4.5s2.01-4.5 4.5-4.5 4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </header>
+
+        <nav class="aside__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <button class="nav__button">Ремонт техники</button>
+            </li>
+
+            <li class="nav__item">
+              <button class="nav__button nav__button--active">
+                Услуги и сервисы
+              </button>
+            </li>
+
+            <li class="nav__item">
+              <button class="nav__button">Корпоративным клиентам</button>
+            </li>
+
+            <li class="nav__item">
+              <button class="nav__button">Продавцам техники</button>
+            </li>
+
+            <li class="nav__item">
+              <button class="nav__button">Партнерам</button>
+            </li>
+
+            <li class="nav__item">
+              <button class="nav__button">Производителям</button>
+            </li>
+
+            <li class="nav__item">
+              <button class="nav__button">Наши сервисные центры</button>
+            </li>
+
+            <li class="nav__item">
+              <button class="nav__button">Контакты</button>
+            </li>
+          </ul>
+        </nav>
+
+        <footer class="aside__footer">
+          <ul class="aside__contacts contacts">
+            <li class="contacts__item">
+              <button class="contacts__button button" aria-label="Позвонить">
+                <svg
+                  class="contacts__img"
                   fill="currentColor"
-                  fill-rule="evenodd"
-                />
-                <mask
-                  height="20"
-                  id="b"
-                  maskUnits="userSpaceOnUse"
-                  style="mask-type: alpha"
-                  width="20"
-                  x="10"
-                  y="11"
+                  height="40"
+                  width="40"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="m12.76 23.25 2.54-.29c.61-.07 1.21.14 1.64.57l1.84 1.84c2.83-1.44 5.15-3.75 6.59-6.59l-1.85-1.85a1.99 1.99 0 0 1-.57-1.64l.29-2.52c.12-1.01.97-1.77 1.99-1.77h1.73c1.13 0 2.07.94 2 2.07-.53 8.54-7.36 15.36-15.89 15.89-1.13.07-2.07-.87-2.07-2v-1.73c-.01-1.01.75-1.86 1.76-1.98Z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </li>
+
+            <li class="contacts__item">
+              <button
+                class="contacts__button button"
+                aria-label="Написать сообщение"
+              >
+                <svg
+                  class="contacts__img"
+                  fill="currentColor"
+                  height="40"
+                  width="40"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     clip-rule="evenodd"
@@ -300,103 +289,119 @@
                     fill="currentColor"
                     fill-rule="evenodd"
                   />
-                </mask>
-              </svg>
-            </button>
-          </li>
+                  <mask
+                    height="20"
+                    id="b"
+                    maskUnits="userSpaceOnUse"
+                    style="mask-type: alpha"
+                    width="20"
+                    x="10"
+                    y="11"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M28 11H12c-1.1 0-1.99.9-1.99 2L10 31l4-5h14c1.1 0 2-.9 2-2V13c0-1.1-.9-2-2-2Zm-7 11h-6c-.55 0-1-.45-1-1s.45-1 1-1h6c.55 0 1 .45 1 1s-.45 1-1 1Zm4-5H15c-.55 0-1-.45-1-1s.45-1 1-1h10c.55 0 1 .45 1 1s-.45 1-1 1Z"
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                    />
+                  </mask>
+                </svg>
+              </button>
+            </li>
 
-          <li class="contacts__item">
-            <button class="contacts__button button" aria-label="Профиль">
-              <svg
-                class="contacts__img"
-                fill="currentColor"
-                height="40"
-                width="40"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M20.5 19a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM10.017 26.612c-.13.73.518 1.388 1.322 1.388H28.66c.83 0 1.453-.659 1.323-1.388C29.23 22.4 25.056 20 20 20c-5.057 0-9.231 2.4-9.983 6.612Z"
+            <li class="contacts__item">
+              <button class="contacts__button button" aria-label="Профиль">
+                <svg
+                  class="contacts__img"
                   fill="currentColor"
-                />
-              </svg>
-            </button>
-          </li>
-        </ul>
+                  height="40"
+                  width="40"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.5 19a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM10.017 26.612c-.13.73.518 1.388 1.322 1.388H28.66c.83 0 1.453-.659 1.323-1.388C29.23 22.4 25.056 20 20 20c-5.057 0-9.231 2.4-9.983 6.612Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </li>
+          </ul>
 
-        <ul class="aside__communication communication">
-          <li class="communication__item">
-            <a
-              class="communication__link communication__link--mail"
-              aria-label="написать сообщение на почту mail@cps.com"
-              href="mailto:mail@cps.com"
-              >mail@cps.com</a
-            >
-          </li>
+          <ul class="aside__communication communication">
+            <li class="communication__item">
+              <a
+                class="communication__link communication__link--mail"
+                aria-label="написать сообщение на почту mail@cps.com"
+                href="mailto:mail@cps.com"
+                >mail@cps.com</a
+              >
+            </li>
 
-          <li class="communication__item">
-            <a
-              class="communication__link communication__link--phone"
-              aria-label="позвонить по номеру телефона 8 800 890 8900"
-              href="tel:88008908900"
-              >8 800 890 8900</a
-            >
-          </li>
-        </ul>
+            <li class="communication__item">
+              <a
+                class="communication__link communication__link--phone"
+                aria-label="позвонить по номеру телефона 8 800 890 8900"
+                href="tel:88008908900"
+                >8 800 890 8900</a
+              >
+            </li>
+          </ul>
 
-        <ul class="aside__switch-language switch-language">
-          <li class="switch-language__item">
-            <input
-              class="switch-language__button"
-              aria-label="установлен русский язык"
-              checked
-              data-language="ru"
-              id="language--ru"
-              name="language"
-              type="radio"
-            />
-            <label
-              class="switch-language__label"
-              for="language--ru"
-              tabindex="0"
-              >ru</label
-            >
-          </li>
+          <ul class="aside__switch-language switch-language">
+            <li class="switch-language__item">
+              <input
+                class="switch-language__button"
+                aria-label="установлен русский язык"
+                checked
+                data-language="ru"
+                id="language--ru"
+                name="language"
+                type="radio"
+              />
+              <label
+                class="switch-language__label"
+                for="language--ru"
+                tabindex="0"
+                >ru</label
+              >
+            </li>
 
-          <li class="switch-language__item">
-            <input
-              class="switch-language__button"
-              aria-label="установлен английский язык"
-              data-language="en"
-              id="language--en"
-              name="language"
-              type="radio"
-            />
-            <label
-              class="switch-language__label"
-              for="language--en"
-              tabindex="0"
-              >en</label
-            >
-          </li>
+            <li class="switch-language__item">
+              <input
+                class="switch-language__button"
+                aria-label="установлен английский язык"
+                data-language="en"
+                id="language--en"
+                name="language"
+                type="radio"
+              />
+              <label
+                class="switch-language__label"
+                for="language--en"
+                tabindex="0"
+                >en</label
+              >
+            </li>
 
-          <li class="switch-language__item">
-            <input
-              class="switch-language__button"
-              aria-label="установлен китайский язык"
-              data-language="ch"
-              id="language--ch"
-              name="language"
-              type="radio"
-            />
-            <label
-              class="switch-language__label"
-              for="language--ch"
-              tabindex="0"
-              >ch</label
-            >
-          </li>
-        </ul>
-      </footer>
+            <li class="switch-language__item">
+              <input
+                class="switch-language__button"
+                aria-label="установлен китайский язык"
+                data-language="ch"
+                id="language--ch"
+                name="language"
+                type="radio"
+              />
+              <label
+                class="switch-language__label"
+                for="language--ch"
+                tabindex="0"
+                >ch</label
+              >
+            </li>
+          </ul>
+        </footer>
+      </div>
     </aside>
 
     <main class="page__main main">
@@ -1060,24 +1065,46 @@
             <ul class="price__list swiper-wrapper">
               <li class="price__item swiper-slide">
                 <ul class="price__service-list">
-                  <li class="price__service-item service-item service-item--service">
+                  <li
+                    class="price__service-item service-item service-item--service"
+                  >
                     <h4 class="service-item__title">Ремонтные услуги</h4>
                     <p class="service-item__desc">Диагностика</p>
                   </li>
 
-                  <li class="price__service-item service-item service-item--price">
+                  <li
+                    class="price__service-item service-item service-item--price"
+                  >
                     <h4 class="service-item__title">Цена</h4>
                     <p class="service-item__desc">Бесплатно</p>
                   </li>
 
-                  <li class="price__service-item service-item service-item--date">
+                  <li
+                    class="price__service-item service-item service-item--date"
+                  >
                     <h4 class="service-item__title">Срок</h4>
                     <p class="service-item__desc">30 мин</p>
                   </li>
 
-                  <li class="price__service-item service-item service-item--button">
-                    <button class="service-item__button">Заказать
-                      <svg class="service-item__button-img" width="6" height="10" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M.294 8.236a1 1 0 0 0 0 1.407l.046.047a1 1 0 0 0 1.422 0l3.944-3.987a1 1 0 0 0 0-1.406L1.762.31A1 1 0 0 0 .34.31L.294.358a1 1 0 0 0 0 1.406L3.496 5 .294 8.236Z" fill="currentColor"/></svg>
+                  <li
+                    class="price__service-item service-item service-item--button"
+                  >
+                    <button class="service-item__button">
+                      Заказать
+                      <svg
+                        class="service-item__button-img"
+                        width="6"
+                        height="10"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M.294 8.236a1 1 0 0 0 0 1.407l.046.047a1 1 0 0 0 1.422 0l3.944-3.987a1 1 0 0 0 0-1.406L1.762.31A1 1 0 0 0 .34.31L.294.358a1 1 0 0 0 0 1.406L3.496 5 .294 8.236Z"
+                          fill="currentColor"
+                        />
+                      </svg>
                     </button>
                   </li>
                 </ul>
@@ -1085,24 +1112,46 @@
 
               <li class="price__item swiper-slide">
                 <ul class="price__service-list">
-                  <li class="price__service-item service-item service-item--service">
+                  <li
+                    class="price__service-item service-item service-item--service"
+                  >
                     <h4 class="service-item__title">Ремонтные услуги</h4>
                     <p class="service-item__desc">Замена дисплея</p>
                   </li>
 
-                  <li class="price__service-item service-item service-item--price">
+                  <li
+                    class="price__service-item service-item service-item--price"
+                  >
                     <h4 class="service-item__title">Цена</h4>
                     <p class="service-item__desc">1 000 ₽</p>
                   </li>
 
-                  <li class="price__service-item service-item service-item--date">
+                  <li
+                    class="price__service-item service-item service-item--date"
+                  >
                     <h4 class="service-item__title">Срок</h4>
                     <p class="service-item__desc">30-120 мин</p>
                   </li>
 
-                  <li class="price__service-item service-item service-item--button">
-                    <button class="service-item__button">Заказать
-                      <svg class="service-item__button-img" width="6" height="10" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M.294 8.236a1 1 0 0 0 0 1.407l.046.047a1 1 0 0 0 1.422 0l3.944-3.987a1 1 0 0 0 0-1.406L1.762.31A1 1 0 0 0 .34.31L.294.358a1 1 0 0 0 0 1.406L3.496 5 .294 8.236Z" fill="currentColor"/></svg>
+                  <li
+                    class="price__service-item service-item service-item--button"
+                  >
+                    <button class="service-item__button">
+                      Заказать
+                      <svg
+                        class="service-item__button-img"
+                        width="6"
+                        height="10"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M.294 8.236a1 1 0 0 0 0 1.407l.046.047a1 1 0 0 0 1.422 0l3.944-3.987a1 1 0 0 0 0-1.406L1.762.31A1 1 0 0 0 .34.31L.294.358a1 1 0 0 0 0 1.406L3.496 5 .294 8.236Z"
+                          fill="currentColor"
+                        />
+                      </svg>
                     </button>
                   </li>
                 </ul>
@@ -1110,24 +1159,48 @@
 
               <li class="price__item swiper-slide">
                 <ul class="price__service-list">
-                  <li class="price__service-item service-item service-item--service">
+                  <li
+                    class="price__service-item service-item service-item--service"
+                  >
                     <h4 class="service-item__title">Ремонтные услуги</h4>
-                    <p class="service-item__desc">Замена полифонического динамика</p>
+                    <p class="service-item__desc">
+                      Замена полифонического динамика
+                    </p>
                   </li>
 
-                  <li class="price__service-item service-item service-item--price">
+                  <li
+                    class="price__service-item service-item service-item--price"
+                  >
                     <h4 class="service-item__title">Цена</h4>
                     <p class="service-item__desc">1 000 ₽</p>
                   </li>
 
-                  <li class="price__service-item service-item service-item--date">
+                  <li
+                    class="price__service-item service-item service-item--date"
+                  >
                     <h4 class="service-item__title">Срок</h4>
                     <p class="service-item__desc">30-120 мин</p>
                   </li>
 
-                  <li class="price__service-item service-item service-item--button">
-                    <button class="service-item__button">Заказать
-                      <svg class="service-item__button-img" width="6" height="10" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M.294 8.236a1 1 0 0 0 0 1.407l.046.047a1 1 0 0 0 1.422 0l3.944-3.987a1 1 0 0 0 0-1.406L1.762.31A1 1 0 0 0 .34.31L.294.358a1 1 0 0 0 0 1.406L3.496 5 .294 8.236Z" fill="currentColor"/></svg>
+                  <li
+                    class="price__service-item service-item service-item--button"
+                  >
+                    <button class="service-item__button">
+                      Заказать
+                      <svg
+                        class="service-item__button-img"
+                        width="6"
+                        height="10"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M.294 8.236a1 1 0 0 0 0 1.407l.046.047a1 1 0 0 0 1.422 0l3.944-3.987a1 1 0 0 0 0-1.406L1.762.31A1 1 0 0 0 .34.31L.294.358a1 1 0 0 0 0 1.406L3.496 5 .294 8.236Z"
+                          fill="currentColor"
+                        />
+                      </svg>
                     </button>
                   </li>
                 </ul>
@@ -1135,24 +1208,48 @@
 
               <li class="price__item swiper-slide">
                 <ul class="price__service-list">
-                  <li class="price__service-item service-item service-item--service">
+                  <li
+                    class="price__service-item service-item service-item--service"
+                  >
                     <h4 class="service-item__title">Ремонтные услуги</h4>
-                    <p class="service-item__desc">Тестирование с выдачей технического заключения</p>
+                    <p class="service-item__desc">
+                      Тестирование с выдачей технического заключения
+                    </p>
                   </li>
 
-                  <li class="price__service-item service-item service-item--price">
+                  <li
+                    class="price__service-item service-item service-item--price"
+                  >
                     <h4 class="service-item__title">Цена</h4>
                     <p class="service-item__desc">1 000 ₽</p>
                   </li>
 
-                  <li class="price__service-item service-item service-item--date">
+                  <li
+                    class="price__service-item service-item service-item--date"
+                  >
                     <h4 class="service-item__title">Срок</h4>
                     <p class="service-item__desc">30-120 мин</p>
                   </li>
 
-                  <li class="price__service-item service-item service-item--button">
-                    <button class="service-item__button">Заказать
-                      <svg class="service-item__button-img" width="6" height="10" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M.294 8.236a1 1 0 0 0 0 1.407l.046.047a1 1 0 0 0 1.422 0l3.944-3.987a1 1 0 0 0 0-1.406L1.762.31A1 1 0 0 0 .34.31L.294.358a1 1 0 0 0 0 1.406L3.496 5 .294 8.236Z" fill="currentColor"/></svg>
+                  <li
+                    class="price__service-item service-item service-item--button"
+                  >
+                    <button class="service-item__button">
+                      Заказать
+                      <svg
+                        class="service-item__button-img"
+                        width="6"
+                        height="10"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M.294 8.236a1 1 0 0 0 0 1.407l.046.047a1 1 0 0 0 1.422 0l3.944-3.987a1 1 0 0 0 0-1.406L1.762.31A1 1 0 0 0 .34.31L.294.358a1 1 0 0 0 0 1.406L3.496 5 .294 8.236Z"
+                          fill="currentColor"
+                        />
+                      </svg>
                     </button>
                   </li>
                 </ul>
@@ -1160,24 +1257,48 @@
 
               <li class="price__item swiper-slide">
                 <ul class="price__service-list">
-                  <li class="price__service-item service-item service-item--service">
+                  <li
+                    class="price__service-item service-item service-item--service"
+                  >
                     <h4 class="service-item__title">Ремонтные услуги</h4>
-                    <p class="service-item__desc">Замена программного обеспечения</p>
+                    <p class="service-item__desc">
+                      Замена программного обеспечения
+                    </p>
                   </li>
 
-                  <li class="price__service-item service-item service-item--price">
+                  <li
+                    class="price__service-item service-item service-item--price"
+                  >
                     <h4 class="service-item__title">Цена</h4>
                     <p class="service-item__desc">1 000 ₽</p>
                   </li>
 
-                  <li class="price__service-item service-item service-item--date">
+                  <li
+                    class="price__service-item service-item service-item--date"
+                  >
                     <h4 class="service-item__title">Срок</h4>
                     <p class="service-item__desc">30-120 мин</p>
                   </li>
 
-                  <li class="price__service-item service-item service-item--button">
-                    <button class="service-item__button">Заказать
-                      <svg class="service-item__button-img" width="6" height="10" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M.294 8.236a1 1 0 0 0 0 1.407l.046.047a1 1 0 0 0 1.422 0l3.944-3.987a1 1 0 0 0 0-1.406L1.762.31A1 1 0 0 0 .34.31L.294.358a1 1 0 0 0 0 1.406L3.496 5 .294 8.236Z" fill="currentColor"/></svg>
+                  <li
+                    class="price__service-item service-item service-item--button"
+                  >
+                    <button class="service-item__button">
+                      Заказать
+                      <svg
+                        class="service-item__button-img"
+                        width="6"
+                        height="10"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M.294 8.236a1 1 0 0 0 0 1.407l.046.047a1 1 0 0 0 1.422 0l3.944-3.987a1 1 0 0 0 0-1.406L1.762.31A1 1 0 0 0 .34.31L.294.358a1 1 0 0 0 0 1.406L3.496 5 .294 8.236Z"
+                          fill="currentColor"
+                        />
+                      </svg>
                     </button>
                   </li>
                 </ul>
@@ -1188,15 +1309,54 @@
           </div>
 
           <div class="price__info">
-            Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.
+            Все цены указаны с учетом НДС. Стоимость ремонта указана на
+            единичную услугу. Для получения коммерческого предложения на
+            постоянное обслуживание, оставьте заявку.
           </div>
 
           <button class="price__button">
-            <span class="price__button-text">Получить коммерческое предложение</span>
-            <svg class="price__button-img" width="6" height="10" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M.294 8.236a1 1 0 0 0 0 1.407l.046.047a1 1 0 0 0 1.422 0l3.944-3.987a1 1 0 0 0 0-1.406L1.762.31A1 1 0 0 0 .34.31L.294.358a1 1 0 0 0 0 1.406L3.496 5 .294 8.236Z" fill="currentColor"/></svg>
+            <span class="price__button-text"
+              >Получить коммерческое предложение</span
+            >
+            <svg
+              class="price__button-img"
+              width="6"
+              height="10"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M.294 8.236a1 1 0 0 0 0 1.407l.046.047a1 1 0 0 0 1.422 0l3.944-3.987a1 1 0 0 0 0-1.406L1.762.31A1 1 0 0 0 .34.31L.294.358a1 1 0 0 0 0 1.406L3.496 5 .294 8.236Z"
+                fill="currentColor"
+              />
+            </svg>
           </button>
         </section>
       </section>
     </main>
+
+    <footer class="page__footer footer">
+      <ul class="footer__list">
+        <li class="footer__item">
+          <div class="footer__copyright copyright">
+            <p class="copyright__text">
+              © <time datetime="2019">2019</time> CPS
+            </p>
+            <p class="copyright__text">Разработано командой Apesong</p>
+          </div>
+        </li>
+        <li class="footer__item">
+          <a class="footer__politics" href="#"> Политика конфиденциальности </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__info" href="#">
+            Информация, размещенная на данной странице, не является публичной
+            офертой
+          </a>
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>

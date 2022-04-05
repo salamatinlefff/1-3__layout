@@ -4,6 +4,9 @@
   padding: 18px 16px 32px;
 
   @media (min-width: $breakpoint_xl) {
+    grid-column: 1;
+    grid-row: 1 / -1;
+
     .page__aside {
       padding: 30px 31px 0px 24px;
     }

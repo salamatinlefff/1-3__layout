@@ -1,14 +1,30 @@
-.main__services {
-  position: relative;
-  padding: 0 16px 19px;
+.page__main {
+  margin-bottom: 40px;
 
   @media (min-width: $breakpoint_sm) {
-    position: relative;
-    padding: 0 24px 25px;
+    margin-bottom: 47px;
+  }
+
+  @media (min-width: $breakpoint_md) {
+    margin-bottom: 50px;
   }
 
   @media (min-width: $breakpoint_xl) {
-    padding: 42px 32px 28px;
+    grid-column: 2;
+  }
+}
+
+.main__services {
+  position: relative;
+  padding: 0 16px;
+
+  @media (min-width: $breakpoint_sm) {
+    position: relative;
+    padding: 0 24px;
+  }
+
+  @media (min-width: $breakpoint_xl) {
+    padding: 42px 32px 0;
   }
 }
 

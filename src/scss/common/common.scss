@@ -69,6 +69,7 @@ button {
   @media (min-width: $breakpoint_xl) {
     display: grid;
     grid-template-columns: 320px auto;
+    grid-template-rows: repeat(2, auto);
   }
 }
 
