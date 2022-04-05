@@ -7,20 +7,39 @@ Swiper.use({ Pagination });
 
 const variables = {
   swipers: [],
-  swiperContainers: ['.brands__swiper ', '.periphery__swiper'],
+  swiperContainers: ['.brands__swiper', '.periphery__swiper', '.price__swiper'],
 };
 
 const swiper = () => {
-  const breakpoint = window.matchMedia('(min-width:580px)');
+  const priceTitles = document.querySelectorAll('.service-item__title');
+  const breakpoint = window.matchMedia('(min-width:576px)');
   let swiperCount = variables.swiperContainers.length;
 
   const breakpointChecker = () => {
+    console.log('breakpoint :', breakpoint);
     let ifHasSwipers = variables.swipers.length;
+
+    if (breakpoint.matches) {
+      togglePriceTitles(true);
+    }
 
     if (breakpoint.matches && ifHasSwipers) {
       return destroySwiper();
     } else if (!breakpoint.matches) {
+      togglePriceTitles();
       return createSwiper();
+    }
+  };
+
+  function togglePriceTitles(hide) {
+    if(hide) {
+      priceTitles.forEach((title) => {
+        title.classList.add('visually-hidden');
+      });
+    } else {
+      priceTitles.forEach((title) => {
+        title.classList.remove('visually-hidden');
+      });
     }
   };
 
@@ -28,7 +47,6 @@ const swiper = () => {
     for (let i = 0; i < swiperCount; i += 1) {
       console.log('variables.swipers[i] destroy :', variables.swipers[i]);
       variables.swipers[i].destroy();
-      console.log('variables.swipers[i] :', variables.swipers[i]);
     }
   }
 
