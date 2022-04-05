@@ -80,8 +80,8 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif|webp|awif|ico)$/i,
-        type: isProd('asset/resource','asset/inline') ,
-        generator: isProd({filename: 'assets/img/[hash][ext][query]'}, {})
+        type: isProd('asset/resource', 'asset/inline'),
+        generator: isProd({ filename: 'assets/img/[hash][ext][query]' }, {}),
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
