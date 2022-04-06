@@ -21,11 +21,16 @@ $burger-background: #ff3e79;
 $burger-line-active: transparent;
 
 $breakpoint_xs: 360px;
+$breakpoint_xm: 440px;
 $breakpoint_sm: 576px;
 $breakpoint_md: 992px;
 $breakpoint_xl: 1300px;
 
 @media (min-width: $breakpoint_sm) {
+
+}
+
+@media (min-width: $breakpoint_xm) {
 
 }
 

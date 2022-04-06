@@ -79,3 +79,18 @@
   color: $second-color;
   opacity: 0.72;
 }
+
+%modal-and-price-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 32px;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.15px;
+  text-transform: uppercase;
+  background-color: $buttons-bg;
+  color: $second-bg;
+}

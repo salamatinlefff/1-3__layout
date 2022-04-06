@@ -1,0 +1,117 @@
+.page__modal-call {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: opacity 0.34s ease-in-out;
+}
+
+.modal-call {
+  background-color: $second-bg;
+  max-width: 440px;
+  padding: 24px 16px;
+  filter: drop-shadow(-2px 0px 4px rgba(69, 79, 126, 0.02))
+    drop-shadow(16px 0px 26px rgba(14, 24, 80, 0.2));
+
+  @media (min-width: $breakpoint_xm) {
+    padding: 40px 32px;
+  }
+
+  @media (min-width: $breakpoint_xm) {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 1px;
+      background-color: $seventh-bg;
+    }
+  }
+
+  &--active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__button-close {
+    margin-bottom: 40px;
+
+    @media (min-width: $breakpoint_xm) {
+      position: absolute;
+      top: 32px;
+      left: -73px;
+}
+  }
+
+  &__title {
+    position: relative;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: $main-color;
+    margin-bottom: 24px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: calc((32px - 40px) / 2);
+      left: -16px;
+      width: 4px;
+      height: 40px;
+      border-radius: 2px;
+      background-color: $third-bg;
+
+      @media (min-width: $breakpoint_xm) {
+        &::before {
+          left: -15px;
+        }
+      }
+
+      @media (min-width: $breakpoint_xm) {
+        left: -31px;
+      }
+    }
+  }
+}
+
+.form-call {
+  &__input {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $sixth-bg;
+    border-radius: 8px;
+    border: 1px solid $fourth-bg;
+    background: $second-bg;
+
+    &::placeholder {
+      color: $sixth-bg;
+    }
+  }
+
+  &__text {
+    margin-bottom: 18px;
+    font-size: 14px;
+    line-height: 16px;
+    color: $second-color;
+  }
+
+  &__link {
+    color: $buttons-bg;
+  }
+
+  &__button {
+    @extend %modal-and-price-button;
+
+    margin-left: auto;
+    border-radius: 16px;
+    padding: 4px 18px;
+    width: 136px;
+  }
+}
