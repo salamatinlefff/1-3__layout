@@ -84,16 +84,20 @@ const page = () => {
     const overlay = document.querySelector('.overlay');
     const aside = document.querySelector('.aside');
     const asideButtonClose = aside.querySelector('.aside__button-close');
-    const asideButtonCall = document.querySelectorAll(
-      '.contacts__button--call'
-    );
     const modalCall = document.querySelector('.page__modal-call');
     const modalCallButtonClose = modalCall.querySelector(
       '.modal-call__button-close'
     );
+    const buttonCall = document.querySelectorAll('.contacts__button--call');
+    const modalFeedback = document.querySelector('.page__modal-feedback');
+    const modalFeedbackButtonClose = modalFeedback.querySelector(
+      '.modal-feedback__button-close'
+    );
+    const buttonFeedback = document.querySelectorAll(
+      '.contacts__button-feedback'
+      );
 
     const pageHeight = document.documentElement.scrollHeight;
-    console.log('document.documentElement.scrollHeight :', document.documentElement.scrollHeight);
 
     const arrayPopupsForListener = [
       {
@@ -102,11 +106,17 @@ const page = () => {
         activeClass: 'aside--active',
       },
       {
-        button: asideButtonCall,
+        button: buttonCall,
         section: modalCall,
         activeClass: 'modal-call--active',
         needCloseMenu: true,
       },
+      {
+        button: buttonFeedback,
+        section: modalFeedback,
+        activeClass: 'modal-feedback--active',
+        needCloseMenu: true,
+      }
     ];
 
     const openPopup = (section, sectionClassActive, needCloseMenu) => {
@@ -140,6 +150,7 @@ const page = () => {
         localStorage.removeItem('currentLocationOnPage');
       }
 
+      modalFeedback.classList.remove('modal-feedback--active');
       modalCall.classList.remove('modal-call--active');
       overlay.classList.remove('overlay--active');
       overlay.style.zIndex = '';
@@ -176,7 +187,11 @@ const page = () => {
     };
 
     openButtonsListeners(arrayPopupsForListener);
-    closeButtonsListener(asideButtonClose, modalCallButtonClose);
+    closeButtonsListener(
+      asideButtonClose,
+      modalCallButtonClose,
+      modalFeedbackButtonClose
+    );
 
     overlay.addEventListener('click', (event) => {
       if (event.target.classList.contains('overlay'))
