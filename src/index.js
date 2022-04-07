@@ -16,6 +16,7 @@ const page = () => {
     successSends: document.querySelectorAll('.success-send'),
     modalCallTitle: document.querySelector('.modal-call__title'),
     modalFeedbackTitle: document.querySelector('.modal-feedback__title'),
+    scrollWidth: window.innerWidth - document.body.clientWidth,
   };
 
   const swiper = () => {
@@ -123,15 +124,10 @@ const page = () => {
     ];
 
     const openPopup = (section, sectionClassActive, needCloseMenu) => {
-      const currentLocation = window.pageYOffset;
-      localStorage.setItem('currentLocationOnPage', currentLocation);
 
-      section.style.height = `${pageHeight}px`;
-
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-      });
+      document.body.style.overflow = 'hidden';
+      document.body.style.paddingRight = `${variables.scrollWidth}px`;
+      section.style.maxHeight = `${pageHeight}px`;
       section.classList.add(sectionClassActive);
       overlay.classList.add('overlay--active');
 
@@ -142,17 +138,6 @@ const page = () => {
     };
 
     const closePopup = (needCloseMenu) => {
-      const currentLocation = localStorage.getItem('currentLocationOnPage');
-
-      if (currentLocation) {
-        window.scrollTo({
-          top: currentLocation,
-          behavior: 'smooth',
-        });
-
-        localStorage.removeItem('currentLocationOnPage');
-      }
-
       [...document.forms].forEach((form) => {
         form.classList.remove('visually-hidden');
         form.style.opacity = 1;
@@ -169,6 +154,8 @@ const page = () => {
       modalCall.classList.remove('modal-call--active');
       overlay.classList.remove('overlay--active');
       overlay.style.zIndex = '';
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
 
       if (needCloseMenu) closeMenu();
     };
