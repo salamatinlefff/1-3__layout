@@ -42,7 +42,6 @@
   &--active {
     transform: translateX(0);
     filter: drop-shadow(16px 0px 32px $aside-shadow-bg);
-    height: min-content;
   }
 
   &__wrapper {
