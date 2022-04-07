@@ -1,5 +1,6 @@
 .page__modal-call {
   @extend %modal-position;
+  width: 100vw;
 }
 
 .modal-call {
@@ -26,6 +27,8 @@
 }
 
 .form-call {
+  transition: all 0.34s ease-in-out;
+
   &__input {
     @extend %modal-input;
   }

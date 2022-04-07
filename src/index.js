@@ -13,6 +13,9 @@ const page = () => {
       '.periphery__swiper',
       '.price__swiper',
     ],
+    successSends: document.querySelectorAll('.success-send'),
+    modalCallTitle: document.querySelector('.modal-call__title'),
+    modalFeedbackTitle: document.querySelector('.modal-feedback__title'),
   };
 
   const swiper = () => {
@@ -95,7 +98,7 @@ const page = () => {
     );
     const buttonFeedback = document.querySelectorAll(
       '.contacts__button-feedback'
-      );
+    );
 
     const pageHeight = document.documentElement.scrollHeight;
 
@@ -116,7 +119,7 @@ const page = () => {
         section: modalFeedback,
         activeClass: 'modal-feedback--active',
         needCloseMenu: true,
-      }
+      },
     ];
 
     const openPopup = (section, sectionClassActive, needCloseMenu) => {
@@ -149,6 +152,18 @@ const page = () => {
 
         localStorage.removeItem('currentLocationOnPage');
       }
+
+      [...document.forms].forEach((form) => {
+        form.classList.remove('visually-hidden');
+        form.style.opacity = 1;
+      });
+      variables.modalCallTitle.style.opacity = 1;
+      variables.modalFeedbackTitle.style.opacity = 1;
+      variables.modalCallTitle.classList.remove('visually-hidden');
+      variables.modalFeedbackTitle.classList.remove('visually-hidden');
+      variables.successSends.forEach((successSend) => {
+        successSend.innerHTML = '';
+      });
 
       modalFeedback.classList.remove('modal-feedback--active');
       modalCall.classList.remove('modal-call--active');
@@ -197,6 +212,89 @@ const page = () => {
       if (event.target.classList.contains('overlay'))
         closePopup('and-close-menu-please');
     });
+  };
+
+  const sendForms = () => {
+    [...document.forms].forEach((form) => {
+      addListeners(form);
+    });
+
+    const createMessageAfterSend = (json, err) => {
+      if (err) {
+        variables.successSends.forEach((successSend) => {
+          successSend.innerHTML = `
+            <h2 class='success-send__title'>К сожалению произошли технические шоколадки. Попробуйте позднее или свяжитесь с нами по номеру телефона 8-800-555-35-35</h2>
+            `;
+        });
+      }
+
+      variables.successSends.forEach((successSend) => {
+        successSend.innerHTML = `
+            <h2 class='success-send__title'>Заявка успешно отправлена</h2>
+            <div class="success-send__wrapper">
+            ${
+              json.name
+                ? `<p class="success-send__text">Имя:</p>
+                <p class="success-send__value">${json.name}</p>`
+                : ''
+            }
+            ${
+              json.telephone
+                ? `<p class="success-send__text">Телефон:</p>
+                <p class="success-send__value">${json.telephone}</p>`
+                : ''
+            }
+            ${
+              json.email
+                ? `<p class="success-send__text">Почта:</p>
+                <p class="success-send__value">${json.email}</p>`
+                : ''
+            }
+            ${
+              json.message
+                ? `<p class="success-send__text">Сообщение:</p>
+                <p class="success-send__value">${json.message}</p>`
+                : ''
+            }
+            </div>
+            `;
+      });
+    };
+
+    function addListeners(form) {
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        const values = Object.fromEntries([...formData]);
+
+        form.style.opacity = 0;
+        variables.modalCallTitle.style.opacity = 0;
+        variables.modalFeedbackTitle.style.opacity = 0;
+
+        setTimeout(() => {
+          form.classList.add('visually-hidden');
+          variables.modalCallTitle.classList.add('visually-hidden');
+          variables.modalFeedbackTitle.classList.add('visually-hidden');
+          form.reset();
+        }, 340);
+
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+          method: 'POST',
+          body: JSON.stringify(values),
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+          },
+        })
+          .then((response) => response.json())
+          .then((json) => {
+            createMessageAfterSend(json);
+          })
+          .catch((err) => {
+            createMessageAfterSend(false, err);
+          });
+      });
+    }
   };
 
   const addSectionListeners = (
@@ -326,6 +424,7 @@ const page = () => {
       '.periphery__button-show-content'
     );
     toggleVisibilityButtons();
+    sendForms();
   };
 
   init();

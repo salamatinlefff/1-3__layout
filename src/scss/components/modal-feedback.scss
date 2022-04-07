@@ -1,5 +1,6 @@
 .page__modal-feedback {
   @extend %modal-position;
+  width: 100vw;
 }
 
 .modal-feedback {
@@ -26,6 +27,8 @@
 }
 
 .form-feedback {
+  transition: all 0.34s ease-in-out;
+
   &__input {
     @extend %modal-input;
 
