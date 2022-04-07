@@ -50,6 +50,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    overflow: auto;
 
     @media (min-width: $breakpoint_sm) {
       max-height: 887px;
