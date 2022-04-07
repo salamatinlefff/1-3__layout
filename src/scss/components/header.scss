@@ -8,38 +8,34 @@
   background-color: $second-bg;
 
   @media (min-width: $breakpoint_sm) {
-    & {
-      padding: 18px 24px;
-    }
+    padding: 18px 24px;
   }
 
-  @media (min-width: $breakpoint_md) {
+  @media (min-width: $breakpoint_xl) {
+    display: none;
+  }
+}
+
+.header__feedback {
+  @media (min-width: $breakpoint_sm) {
     & {
-      display: none;
+      display: flex;
     }
   }
 }
 
-  .header__feedback {
-    @media (min-width: $breakpoint_sm) {
-      & {
-        display: flex;
-      }
-    }
-  }
-
-  .feedback__contacts {
-    @media (min-width: $breakpoint_sm) {
-      & {
+.feedback__contacts {
+  @media (min-width: $breakpoint_sm) {
+    & {
       display: flex;
       gap: 16px;
       margin-right: 22px;
-      }
     }
   }
+}
 
-  .feedback__status {
-    &::before {
+.feedback__status {
+  &::before {
     content: '';
     position: absolute;
     top: 4px;
@@ -49,7 +45,7 @@
     border-radius: 1px;
     background-color: $fourth-bg;
   }
-  }
+}
 
 .status {
   position: relative;

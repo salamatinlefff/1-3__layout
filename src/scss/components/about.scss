@@ -10,7 +10,6 @@
   @media (min-width: $breakpoint_md) {
     margin-bottom: 51px;
   }
-
 }
 
 .about {
@@ -19,11 +18,11 @@
 
     @media (min-width: $breakpoint_sm) {
       margin-bottom: 0;
-      width: 45%;
-      }
+      max-width: 45%;
+    }
 
     @media (min-width: $breakpoint_md) {
-      width: 50%;
+      max-width: 50%;
     }
   }
 
@@ -31,13 +30,13 @@
     margin: 0 -16px;
 
     @media (min-width: $breakpoint_sm) {
-      width: 55%;
+      max-width: 55%;
       margin-left: 0;
       margin-right: 0;
     }
 
     @media (min-width: $breakpoint_md) {
-      width: 50%;
+      max-width: 50%;
     }
   }
 

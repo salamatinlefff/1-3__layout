@@ -1,21 +1,8 @@
-.services__brands {
+.periphery {
   margin-bottom: 24px;
 
   @media (min-width: $breakpoint_sm) {
     margin-bottom: 32px;
-  }
-  @media (min-width: $breakpoint_md) {
-    margin-bottom: 50px;
-  }
-}
-
-.brands {
-  &__title-wrapper {
-    @extend %section-title-wrapper;
-  }
-
-  &__title {
-    @extend %section-title;
   }
 
   &__swiper {
@@ -25,6 +12,7 @@
     @media (min-width: $breakpoint_sm) {
       margin-right: 0;
       margin-bottom: 24px;
+
     }
 
     &::after {
@@ -32,6 +20,7 @@
       content: '';
       top: 0;
       right: 0;
+      bottom: 0;
       display: block;
       background-image: linear-gradient(
         -90deg,
@@ -39,7 +28,6 @@
         rgba(248, 248, 248, 0.0001) 100%
       );
       width: 24px;
-      height: 81px;
       z-index: 2;
 
       @media (min-width: $breakpoint_sm) {
@@ -48,21 +36,30 @@
     }
   }
 
+  &__title-wrapper {
+    @extend %section-title-wrapper;
+  }
+
+  &__title {
+    @extend %section-title;
+  }
+
   &__list {
     @extend %swiper-list;
   }
 
   &__item {
-    box-sizing: border-box;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
     flex-basis: 240px;
-    height: 72px;
-    padding: 0 16px;
-    border-radius: 6px;
+    max-height: 160px;
+    padding: 16px;
+    box-sizing: border-box;
+    background: $second-bg;
     border: 1px solid $fourth-bg;
-    background-color: $second-bg;
+    border-radius: 6px;
 
     @media (min-width: $breakpoint_sm) {
       flex-basis: 224px;
@@ -71,38 +68,14 @@
     @media (min-width: $breakpoint_md) {
       flex-basis: 240px;
     }
-  }
 
-  &__wrapper-logo {
-    display: flex;
-    align-items: center;
+    &-title {
+      font-weight: 500;
+    }
   }
 
   &__button {
     @extend %section-button;
-  }
-
-  &__button-show-content {
-    @extend %section-button-show-content;
-  }
-}
-
-.swiper-pagination {
-  display: flex;
-  justify-content: center;
-  padding-right: 16px;
-
-  @media (min-width: $breakpoint_sm) {
-    display: none;
-  }
-
-  &-bullet {
-    width: 12px;
-    height: 12px;
-    background-color: $fifth-bg;
-
-    &-active {
-      background-color: $sixth-bg;
-    }
+    align-self: flex-end;
   }
 }

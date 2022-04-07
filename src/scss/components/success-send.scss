@@ -1,0 +1,21 @@
+.success-send {
+  &__title {
+    line-height: 40px;
+    margin-bottom: 30px;
+  }
+
+  &__wrapper {
+    display: grid;
+    gap: 16px 0;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  &__text {
+    font-weight: 700;
+  }
+
+  &__value {
+    font-weight: 500;
+    color: $burger-line-focus;
+  }
+}

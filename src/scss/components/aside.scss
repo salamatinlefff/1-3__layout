@@ -1,6 +1,16 @@
 .page__aside {
   transform: translateX(-100%);
   transform-origin: 0 50%;
+  padding: 18px 16px 32px;
+
+  @media (min-width: $breakpoint_xl) {
+    grid-column: 1;
+    grid-row: 1 / -1;
+
+    .page__aside {
+      padding: 30px 31px 0px 24px;
+    }
+  }
 }
 
 .aside {
@@ -9,12 +19,7 @@
   left: 0;
   min-width: 320px;
   max-width: 360px;
-  width: 100%;
-  max-height: 1024px;
   height: 100%;
-  padding: 18px 16px 32px;
-  display: flex;
-  flex-direction: column;
   z-index: 2;
   font-family: $default-font;
   font-weight: 500;
@@ -25,9 +30,31 @@
   background-color: $second-bg;
   transition: transform 0.4s ease-in-out, filter, 0.34s ease-in-out;
 
+  @media (min-width: $breakpoint_xs) {
+    max-width: 320px;
+  }
+
+  @media (min-width: $breakpoint_xl) {
+    position: static;
+    transform: translateX(0);
+  }
+
   &--active {
     transform: translateX(0);
     filter: drop-shadow(16px 0px 32px $aside-shadow-bg);
+    height: min-content;
+  }
+
+  &__wrapper {
+    max-height: 676px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $breakpoint_sm) {
+      max-height: 887px;
+    }
   }
 
   &__header {
@@ -35,10 +62,22 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 22px;
+
+    @media (min-width: $breakpoint_sm) {
+      margin-bottom: 48px;
+    }
+
+    @media (min-width: $breakpoint_xl) {
+      margin-bottom: 36px;
+    }
   }
 
   &__button-close {
     margin-right: 16px;
+
+    @media (min-width: $breakpoint_xl) {
+      display: none;
+    }
   }
 
   &__footer {
@@ -56,23 +95,15 @@
     flex-direction: column;
     gap: 12px;
     margin-bottom: 8px;
+
+    @media (min-width: $breakpoint_xl) {
+      margin-bottom: 41px;
+    }
   }
 
   &__switch-language {
     display: flex;
     gap: 7px;
-  }
-
-  @media (min-width: $breakpoint_xs) {
-    & {
-    max-width: 320px;
-    }
-  }
-
-  @media (min-width: $breakpoint_sm) {
-    &__header {
-      margin-bottom: 48px;
-    }
   }
 }
 
@@ -82,6 +113,10 @@
     flex-direction: column;
     gap: 24px;
     margin-bottom: 32px;
+
+    @media (min-width: $breakpoint_sm) {
+      gap: 28px;
+    }
   }
 
   &__button--active {
@@ -89,7 +124,7 @@
     position: relative;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: calc((24px - 32px) / 2);
       left: -20px;
@@ -98,6 +133,12 @@
       line-height: 24px;
       border-radius: 4px;
       background-color: $third-bg;
+
+      @media (min-width: $breakpoint_xl) {
+        left: -15px;
+        width: 4px;
+        border-radius: 2px;
+      }
     }
   }
 }

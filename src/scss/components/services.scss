@@ -1,14 +1,30 @@
-.main__services {
-  padding: 0 16px 19px;
-  position: relative;
+.page__main {
+  margin-bottom: 40px;
 
   @media (min-width: $breakpoint_sm) {
-    padding: 0 24px 25px;
-    position: relative;
+    margin-bottom: 47px;
   }
 
   @media (min-width: $breakpoint_md) {
-    padding: 42px 32px 21px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $breakpoint_xl) {
+    grid-column: 2;
+  }
+}
+
+.main__services {
+  position: relative;
+  padding: 0 16px;
+
+  @media (min-width: $breakpoint_sm) {
+    position: relative;
+    padding: 0 24px;
+  }
+
+  @media (min-width: $breakpoint_xl) {
+    padding: 42px 32px 0;
   }
 }
 
@@ -20,11 +36,11 @@
   &__header {
     padding: 24px 0;
 
-    @media (min-width: $breakpoint_sm) {
+    @media (min-width: $breakpoint_xl) {
       padding: 24px 0 32px;
     }
 
-    @media (min-width: $breakpoint_md) {
+    @media (min-width: $breakpoint_xl) {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -39,7 +55,7 @@
       margin: 0;
 
       &::before {
-        left: -32px;
+        left: -30px;
       }
     }
   }
@@ -54,18 +70,23 @@
     }
   }
 
-}
-
-.services__status {
-  &::before {
-    @media (min-width: $breakpoint_md) {
-      content: none;
+  &__status {
+    &::before {
+      @media (min-width: $breakpoint_md) {
+        content: none;
+      }
     }
   }
 }
 
 .status {
-    &__button--services {
+  @media (min-width: $breakpoint_xl) {
+    .status {
+      display: flex;
+    }
+  }
+
+  &__button--services {
     background-color: $transparent-bg;
     border-radius: 5px;
   }
@@ -79,15 +100,15 @@
   }
 
   &__text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
     color: $main-color;
 
     @media (min-width: $breakpoint_md) {
       margin-right: 8px;
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 24px;
       text-align: right;
-      letter-spacing: -0.2px;
     }
   }
 
@@ -99,9 +120,9 @@
 
   &--hidden {
     display: none;
-  }
 
-  @media (min-width: $breakpoint_md) {
-    display: flex;
+    @media (min-width: $breakpoint_xl) {
+      display: flex;
+    }
   }
 }
