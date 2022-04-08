@@ -45,7 +45,7 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
     height: 90px;
     font-size: 14px;
     line-height: 18px;
@@ -58,6 +58,10 @@
       line-height: 20px;
       margin-bottom: 10px;
     }
+  }
+
+  &__button-show-content {
+    display: flex;
   }
 
   &__img {
