@@ -50,16 +50,6 @@
     }
   }
 
-  &__title {
-    @media (min-width: $breakpoint_md) {
-      margin: 0;
-
-      &::before {
-        left: -30px;
-      }
-    }
-  }
-
   &__list {
     @media (min-width: $breakpoint_sm) {
       margin-bottom: 32px;

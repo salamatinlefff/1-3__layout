@@ -122,12 +122,12 @@ button {
     }
   }
   @media (min-width: $breakpoint_md) {
-    & {
-      margin: 0;
-    }
+    margin: 0;
+  }
 
+  @media (min-width: $breakpoint_xl) {
     &::before {
-      left: -32px;
+      left: -30px;
     }
   }
 }
