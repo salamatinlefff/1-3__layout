@@ -188,18 +188,13 @@
 }
 
 .switch-language {
-  &__label {
+  &__button {
     cursor: pointer;
     text-transform: uppercase;
     transition: color 0.2s ease-in-out;
   }
 
-  &__button {
-    appearance: none;
-    position: absolute;
-  }
-
-  &__button:checked + &__label {
+  &__button--active {
     color: $second-color;
   }
 }
