@@ -124,11 +124,7 @@ const page = () => {
     ];
 
     const openPopup = (section, sectionClassActive, needCloseMenu) => {
-    console.log('section :', section);
 
-      // document.body.style.overflow = 'hidden';
-      // overlay.style.height = '1000px'
-      document.body.style.paddingRight = `${variables.scrollWidth}px`;
       section.style.height = `${pageHeight}px`;
       section.classList.add(sectionClassActive);
       overlay.classList.add('overlay--active');

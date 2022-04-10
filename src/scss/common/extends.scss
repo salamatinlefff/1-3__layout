@@ -8,6 +8,32 @@
   background-color: $burger-line;
 }
 
+%button-close {
+  position: relative;
+  width: 40px;
+  height: 40px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 21px;
+    border-radius: 1px;
+    background-color: $burger-line;
+    content: '';
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
 %section-title-wrapper {
   margin: 0 -16px 16px -16px;
   padding: 15px 16px 16px;
