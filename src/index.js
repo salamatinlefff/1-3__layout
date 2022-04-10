@@ -16,7 +16,6 @@ const page = () => {
     successSends: document.querySelectorAll('.success-send'),
     modalCallTitle: document.querySelector('.modal-call__title'),
     modalFeedbackTitle: document.querySelector('.modal-feedback__title'),
-    scrollWidth: window.innerWidth - document.body.clientWidth,
   };
 
   const swiper = () => {

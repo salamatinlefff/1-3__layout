@@ -31,7 +31,6 @@
 .feedback__contacts  {
   @media (min-width: $breakpoint_sm) {
       margin-right: 22px;
-
   }
 }
 
@@ -57,9 +56,9 @@
 .status {
   position: relative;
   display: flex;
-  min-width: 116px;
   gap: 16px;
   justify-content: right;
+  min-width: 116px;
 
   &::before {
     content: '';
