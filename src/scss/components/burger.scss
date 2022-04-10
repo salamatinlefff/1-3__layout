@@ -1,3 +1,27 @@
+.header__burger-menu {
+  position: relative;
+  margin-right: 16px;
+
+  &::before {
+    content: none;
+    position: absolute;
+    top: 4px;
+    left: 60px;
+    width: 2px;
+    height: 32px;
+    border-radius: 1px;
+    background-color: $fourth-bg;
+  }
+
+  @media (min-width: $breakpoint_sm) {
+    margin-right: 40px;
+
+    &::before {
+      content: '';
+    }
+  }
+}
+
 .burger-menu {
   position: relative;
   margin: 0;
@@ -12,21 +36,9 @@
   border: none;
   cursor: pointer;
   background-color: $burger-background;
-  margin-right: 16px;
 
   &:active {
     transform: scale(0.9);
-  }
-
-  &::before {
-    content: none;
-    position: absolute;
-    top: 4px;
-    right: -20px;
-    width: 2px;
-    height: 32px;
-    border-radius: 1px;
-    background-color: $fourth-bg;
   }
 
   &__line {
@@ -48,16 +60,6 @@
       @extend %burger-menu-pseudo-el;
       bottom: -7px;
       width: 14px;
-    }
-  }
-
-  @media (min-width: $breakpoint_sm) {
-    & {
-      margin-right: 43px;
-    }
-
-    &::before {
-      content: '';
     }
   }
 }

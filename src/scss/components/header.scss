@@ -16,6 +16,10 @@
   }
 }
 
+.header__logo {
+  margin-right: auto;
+}
+
 .header__feedback {
   @media (min-width: $breakpoint_sm) {
     & {
@@ -24,17 +28,39 @@
   }
 }
 
-.feedback__contacts {
+.feedback__contacts  {
   @media (min-width: $breakpoint_sm) {
-    & {
-      display: flex;
-      gap: 16px;
       margin-right: 22px;
-    }
+
   }
 }
 
-.feedback__status {
+.contacts {
+  @media (min-width: $breakpoint_sm) {
+      display: flex;
+      gap: 16px;
+  }
+}
+
+.contacts__button--call {
+  background-image: url('../assets/img/call.svg');
+}
+
+.contacts__button--feedback {
+  background-image: url('../assets/img/message.svg');
+}
+
+.contacts__button--profile {
+  background-image: url('../assets/img/profile.svg');
+}
+
+.status {
+  position: relative;
+  display: flex;
+  min-width: 116px;
+  gap: 16px;
+  justify-content: right;
+
   &::before {
     content: '';
     position: absolute;
@@ -47,10 +73,10 @@
   }
 }
 
-.status {
-  position: relative;
-  display: flex;
-  min-width: 116px;
-  gap: 16px;
-  justify-content: right;
+.status__button--application {
+  background-image: url('../assets/img/application.svg');
+}
+
+.status__button--status {
+  background-image: url('../assets/img/status.svg');
 }

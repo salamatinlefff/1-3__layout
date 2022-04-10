@@ -72,12 +72,47 @@
     }
   }
 
+  &__logo {
+    margin-right: auto;
+  }
+
   &__button-close {
+    position: relative;
+    width: 40px;
+    height: 40px;
     margin-right: 16px;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 2px;
+      height: 21px;
+      border-radius: 1px;
+      background-color: $burger-line;
+      content: '';
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
 
     @media (min-width: $breakpoint_xl) {
       display: none;
     }
+  }
+
+  &__button-search {
+    width: 40px;
+    height: 40px;
+    background-image: url("../assets/img/search.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 
   &__footer {

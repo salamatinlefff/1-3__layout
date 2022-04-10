@@ -80,6 +80,18 @@
 
   &__button {
     @extend %section-button;
+
+    &:hover {
+      @include hover-color($buttons-bg, 10%);
+
+      &::before {
+        background-color: $main-bg;
+      }
+
+      &::after {
+        background-color: $main-bg;
+      }
+    }
   }
 
   &__button-show-content {

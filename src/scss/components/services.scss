@@ -77,16 +77,24 @@
   }
 
   &__button--services {
-    background-color: $transparent-bg;
+    display: flex;
+    align-items: center;
     border-radius: 5px;
+    width: max-content;
+    background-image: none;
+    background-color: $transparent-bg;
+
+    @media (min-width: $breakpoint_md) {
+      gap: 8px;
+    }
   }
 
   &__button--services:hover {
     background-color: transparent;
   }
 
-  &__button--services:hover &__img-services {
-    background-color: $buttons-focus;
+  &__button--services:hover &__img--services {
+    @include hover-dark($buttons-bg)
   }
 
   &__text {
@@ -94,18 +102,31 @@
     font-weight: 500;
     line-height: 24px;
     letter-spacing: -0.2px;
+    white-space: nowrap;
     color: $main-color;
 
     @media (min-width: $breakpoint_md) {
-      margin-right: 8px;
       text-align: right;
     }
   }
 
-  &__img-services {
+  &__img--services {
+    display: block;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: $buttons-bg;
+    background-repeat: no-repeat;
+    background-position: center;
     transition: transform 0.1s ease-in-out, background-color 0.34s ease-in-out;
+  }
+
+  &__img--services-application {
+    background-image: url('../assets/img/application.svg');
+  }
+
+  &__img--services-status {
+    background-image: url('../assets/img/status.svg');
   }
 
   &--hidden {

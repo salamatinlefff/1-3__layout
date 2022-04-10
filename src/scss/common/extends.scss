@@ -35,15 +35,38 @@
 }
 
 %section-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-left: 3.5px;
+  position: relative;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  color: #ff3e79;
-  border: 2px solid #ff3e79;
+  color: $buttons-bg;
+  border: 2px solid $buttons-bg;
+  transition: background-color 0.34s ease-in-out;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 2px;
+    background-color: $buttons-bg;
+    content: '';
+    transition: background-color 0.34s ease-in-out;
+  }
+
+  &::before {
+    transform: translate(-50%, -25%) rotate(45deg);
+    border-radius: 1px 0 0 1px;
+    transform-origin: right;
+  }
+
+  &::after {
+    transform: translate(-50%, -75%) rotate(-45deg);
+    border-radius: 1px 0 0 1px;
+    transform-origin: right;
+  }
+
 }
 
 %section-button-show-content {
@@ -81,6 +104,7 @@
 }
 
 %modal-and-price-button {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -93,6 +117,30 @@
   text-transform: uppercase;
   background-color: $buttons-bg;
   color: $second-bg;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    width: 10px;
+    height: 2.5px;
+    border-radius: 1px;
+    background-color: $second-bg;
+    content: '';
+  }
+
+  &::before {
+    transform: translateY(-20%) rotate(45deg);
+    border-radius: 1px 0 0 1px;
+    transform-origin: right;
+  }
+
+  &::after {
+    transform: translateY(-80%) rotate(-45deg);
+    border-radius: 1px 0 0 1px;
+    transform-origin: right;
+  }
 }
 
 %modal-container {

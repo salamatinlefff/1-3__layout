@@ -98,7 +98,7 @@ const page = () => {
       '.modal-feedback__button-close'
     );
     const buttonFeedback = document.querySelectorAll(
-      '.contacts__button-feedback'
+      '.contacts__button--feedback'
     );
 
     const pageHeight = document.documentElement.scrollHeight;

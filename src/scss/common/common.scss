@@ -1,6 +1,5 @@
 html {
   box-sizing: border-box;
-  background-color: $main-bg;
 }
 
 *,
@@ -11,9 +10,9 @@ html {
 
 body {
   font-family: $default-font;
-  line-height: 20px;
-  letter-spacing: -0.2px;
+  @include font($size: 16px, $height: 20px, $spacing: -0.2);
   color: #1b1c21;
+  background-color: $main-bg;
 }
 
 img {
@@ -66,6 +65,9 @@ button {
 }
 
 .page {
+  max-width: 1440px;
+  margin: auto;
+
   @media (min-width: $breakpoint_xl) {
     display: grid;
     grid-template-columns: 320px auto;
@@ -74,13 +76,13 @@ button {
 }
 
 .button {
-  display: flex;
-  align-items: center;
-  border: none;
-  padding: 0;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   color: $second-bg;
   background-color: $buttons-bg;
+  background-repeat: no-repeat;
+  background-position: center;
   transition: transform 0.1s ease-in-out, background-color 0.34s ease-in-out;
 
   &:active {
@@ -88,14 +90,18 @@ button {
   }
 
   &:hover {
-    background-color: $buttons-focus;
+    @include hover-dark($buttons-bg);
   }
 }
 
 .logo {
   width: 96px;
   height: 51px;
-  margin-right: auto;
+  transition: filter 0.34s ease-in-out;
+
+  &:hover {
+    filter: saturate(3);
+  }
 }
 
 .title {

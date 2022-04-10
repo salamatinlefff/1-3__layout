@@ -12,7 +12,6 @@
     @media (min-width: $breakpoint_sm) {
       margin-right: 0;
       margin-bottom: 24px;
-
     }
 
     &::after {
@@ -77,5 +76,17 @@
   &__button {
     @extend %section-button;
     align-self: flex-end;
+
+    &:hover {
+      @include hover-color($buttons-bg, 10%);
+
+      &::before {
+        background-color: $main-bg;
+      }
+
+      &::after {
+        background-color: $main-bg;
+      }
+    }
   }
 }
