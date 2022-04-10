@@ -39,9 +39,6 @@
     @extend %section-title-wrapper;
   }
 
-  &__title {
-    @extend %section-title;
-  }
 
   &__list {
     @extend %swiper-list;
@@ -53,7 +50,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     flex-basis: 240px;
-    max-height: 160px;
+    height: 160px;
     padding: 16px;
     box-sizing: border-box;
     background: $second-bg;

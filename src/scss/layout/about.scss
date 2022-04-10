@@ -2,8 +2,6 @@
   margin-bottom: 24px;
 
   @media (min-width: $breakpoint_sm) {
-    display: flex;
-    gap: 48px;
     margin-bottom: 32px;
   }
 
@@ -13,6 +11,11 @@
 }
 
 .about {
+  @media (min-width: $breakpoint_sm) {
+    display: flex;
+    gap: 48px;
+  }
+
   &__info {
     margin-bottom: 16px;
 
@@ -41,21 +44,10 @@
   }
 
   &__desc {
-    position: relative;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    height: 90px;
-    font-size: 14px;
-    line-height: 18px;
-    letter-spacing: 0.2px;
     margin-bottom: 16px;
-    transition: height 0.34s ease-in-out;
 
     @media (min-width: $breakpoint_sm) {
-      height: 160px;
-      line-height: 20px;
       margin-bottom: 10px;
     }
   }
@@ -71,5 +63,21 @@
     @media (min-width: $breakpoint_sm) {
       border-radius: 6px;
     }
+  }
+}
+
+.desc {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 90px;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  transition: height 0.34s ease-in-out;
+
+  @media (min-width: $breakpoint_sm) {
+    height: 160px;
+    line-height: 20px;
   }
 }

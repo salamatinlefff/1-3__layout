@@ -59,10 +59,8 @@
   }
 
   &__title {
-    @extend %section-title;
-
     &-wrapper {
-      @extend %section-title-wrapper;
+       @extend %section-title-wrapper;
 
       @media (min-width: $breakpoint_sm) {
         margin-bottom: 31px;
@@ -205,9 +203,9 @@
   &__button {
     @extend %modal-and-price-button;
 
-    border-radius: 16px;
-    padding: 4px 16px 4px 12px;
+    height: 32px;
     width: 119px;
+    padding: 4px 16px 4px 12px;
+    border-radius: 16px;
   }
-
 }

@@ -9,16 +9,14 @@
   }
 }
 
+
+
 .brands {
   &__title-wrapper {
     @extend %section-title-wrapper;
   }
 
-  &__title {
-    @extend %section-title;
-  }
-
-  &__swiper {
+    &__swiper {
     position: relative;
     margin-right: -16px;
 
@@ -98,6 +96,8 @@
     @extend %section-button-show-content;
   }
 }
+
+
 
 .swiper-pagination {
   display: flex;

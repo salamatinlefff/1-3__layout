@@ -109,6 +109,14 @@ button {
   }
 }
 
+.title-wrapper {
+  @extend %title-wrapper;
+
+  &__text {
+    @extend %section-title;
+  }
+}
+
 .title {
   position: relative;
   font-size: 28px;
@@ -132,7 +140,6 @@ button {
       left: -25px;
     }
   }
-
 
   @media (min-width: $breakpoint_xl) {
     &::before {

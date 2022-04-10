@@ -10,8 +10,6 @@
 
 %button-close {
   position: relative;
-  width: 40px;
-  height: 40px;
 
   &::before,
   &::after {
@@ -36,17 +34,26 @@
 
 %section-title-wrapper {
   margin: 0 -16px 16px -16px;
+
+  @media (min-width: $breakpoint_sm) {
+    margin: 0 -24px 24px -24px;
+  }
+
+  @media (min-width: $breakpoint_xl) {
+    margin: 0 -32px 24px -32px;
+  }
+}
+
+%title-wrapper {
   padding: 15px 16px 16px;
   border-top: 1px solid $seventh-bg;
   background-image: linear-gradient(90deg, #f8f8f8 0%, #ffffff 98.61%);
 
   @media (min-width: $breakpoint_sm) {
-    margin: 0 -24px 24px -24px;
     padding: 15px 24px 16px;
   }
 
   @media (min-width: $breakpoint_xl) {
-    margin: 0 -32px 24px -32px;
     padding: 15px 32px 16px;
   }
 }
@@ -134,7 +141,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 32px;
   text-align: right;
   font-size: 12px;
   font-weight: 700;
@@ -172,7 +178,6 @@
 %modal-container {
   background-color: $second-bg;
   max-width: 440px;
-  height: 100%;
   padding: 24px 16px;
   opacity: 0;
   filter: drop-shadow(-2px 0px 4px rgba(69, 79, 126, 0.02))

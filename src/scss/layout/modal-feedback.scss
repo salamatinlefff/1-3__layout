@@ -20,6 +20,7 @@
       position: absolute;
       top: 32px;
       left: -73px;
+      margin-bottom: 0;
     }
   }
 
@@ -51,9 +52,10 @@
   &__button {
     @extend %modal-and-price-button;
 
-    margin-left: auto;
-    border-radius: 16px;
-    padding: 4px 18px;
+    height: 32px;
     width: 136px;
+    margin-left: auto;
+    padding: 4px 18px;
+    border-radius: 16px;
   }
 }

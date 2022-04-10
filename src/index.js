@@ -100,7 +100,8 @@ const page = () => {
       '.contacts__button--feedback'
     );
 
-    const pageHeight = document.documentElement.scrollHeight;
+    // 100 - magic digit, because scrollHeight less than body height
+    const pageHeight = document.documentElement.scrollHeight + 100;
 
     const arrayPopupsForListener = [
       {

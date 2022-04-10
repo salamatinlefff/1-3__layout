@@ -8,7 +8,9 @@
   @media (min-width: $breakpoint_md) {
     margin-bottom: 50px;
   }
+}
 
+.main {
   @media (min-width: $breakpoint_xl) {
     grid-column: 2;
   }
@@ -16,22 +18,22 @@
 
 .main__services {
   position: relative;
-  padding: 0 16px;
 
   @media (min-width: $breakpoint_sm) {
     position: relative;
     padding: 0 24px;
   }
+}
+
+.services {
+  padding: 0 16px;
+  font-family: $default-font;
+  color: $main-color;
+  background-color: $main-bg;
 
   @media (min-width: $breakpoint_xl) {
     padding: 42px 32px 0;
   }
-}
-
-.services {
-  font-family: $default-font;
-  color: $main-color;
-  background-color: $main-bg;
 
   &__header {
     padding: 24px 0;
@@ -71,9 +73,7 @@
 
 .status {
   @media (min-width: $breakpoint_xl) {
-    .status {
-      display: flex;
-    }
+    display: flex;
   }
 
   &__button--services {
@@ -94,7 +94,7 @@
   }
 
   &__button--services:hover &__img--services {
-    @include hover-dark($buttons-bg)
+    @include hover-dark($buttons-bg);
   }
 
   &__text {
