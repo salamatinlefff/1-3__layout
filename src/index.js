@@ -124,7 +124,12 @@ const page = () => {
     ];
 
     const openPopup = (section, sectionClassActive, needCloseMenu) => {
-
+      if (!section.classList.contains('aside')) {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+      }
       section.style.height = `${pageHeight}px`;
       section.classList.add(sectionClassActive);
       overlay.classList.add('overlay--active');
