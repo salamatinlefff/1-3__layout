@@ -82,6 +82,7 @@
   @media (min-width: $breakpoint_sm) {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 16px 24px;
     height: 160px;
     overflow: hidden;
