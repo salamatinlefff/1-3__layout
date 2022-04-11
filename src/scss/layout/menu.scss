@@ -1,5 +1,7 @@
 .services__menu {
   margin-bottom: 24px;
+  margin-left: -16px;
+  margin-right: -16px;
 
   @media (min-width: $breakpoint_sm) {
     margin-bottom: 32px;
@@ -21,16 +23,24 @@
     display: flex;
     overflow-x: auto;
 
+
+
     @media (min-width: $breakpoint_md) {
       max-width: 1064;
       flex-wrap: wrap;
     }
   }
 
+  &__item {
+    &:first-of-type {
+      margin-left: 14px;
+    }
+  }
+
   &__button {
     white-space: nowrap;
     cursor: pointer;
-    padding: 8px 14px;
+    padding: 8px 14px 8px;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
