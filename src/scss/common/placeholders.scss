@@ -1,3 +1,5 @@
+// burger
+
 %burger-menu-pseudo-el {
   content: '';
   position: absolute;
@@ -7,6 +9,45 @@
   border-radius: 1px;
   background-color: $burger-line;
 }
+
+// blur on menu (and swipers?)
+
+%blur {
+  &::after,
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    display: block;
+    width: 24px;
+    content: '';
+
+    @media (min-width: $breakpoint_md) {
+      content: none;
+    }
+  }
+
+  &::after {
+    background-image: linear-gradient(
+      270deg,
+      #f8f8f8 16.84%,
+      rgba(248, 248, 248, 0.0001) 100%
+    );
+    right: 0;
+  }
+
+  &::before {
+    background-image: linear-gradient(
+      90deg,
+      #f8f8f8 16.84%,
+      rgba(248, 248, 248, 0.0001) 100%
+    );
+    left: 0;
+  }
+}
+
+// button close
 
 %button-close {
   position: relative;
@@ -32,40 +73,7 @@
   }
 }
 
-%section-title-wrapper {
-  margin: 0 -16px 16px -16px;
-
-  @media (min-width: $breakpoint_sm) {
-    margin: 0 -24px 24px -24px;
-  }
-
-  @media (min-width: $breakpoint_xl) {
-    margin: 0 -32px 24px -32px;
-  }
-}
-
-%title-wrapper {
-  padding: 15px 16px 16px;
-  border-top: 1px solid $seventh-bg;
-  background-image: linear-gradient(90deg, #f8f8f8 0%, #ffffff 98.61%);
-
-  @media (min-width: $breakpoint_sm) {
-    padding: 15px 24px 16px;
-  }
-
-  @media (min-width: $breakpoint_xl) {
-    padding: 15px 32px 16px;
-  }
-}
-
-%section-title {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  text-transform: uppercase;
-  color: $second-color;
-}
+// section pink circle buttons
 
 %section-button {
   position: relative;
@@ -101,6 +109,8 @@
   }
 }
 
+// section button 'show all' or 'read more'
+
 %section-button-show-content {
   display: none;
 
@@ -127,14 +137,7 @@
   }
 }
 
-%price-subtitle {
-  margin-bottom: 4px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  color: $second-color;
-  opacity: 0.72;
-}
+// modal button
 
 %modal-and-price-button {
   position: relative;
@@ -175,6 +178,56 @@
   }
 }
 
+// section title wrapper and title
+
+%section-title-wrapper {
+  margin: 0 -16px 16px -16px;
+
+  @media (min-width: $breakpoint_sm) {
+    margin: 0 -24px 24px -24px;
+  }
+
+  @media (min-width: $breakpoint_xl) {
+    margin: 0 -32px 24px -32px;
+  }
+}
+
+%title-wrapper {
+  padding: 15px 16px 16px;
+  border-top: 1px solid $seventh-bg;
+  background-image: linear-gradient(90deg, #f8f8f8 0%, #ffffff 98.61%);
+
+  @media (min-width: $breakpoint_sm) {
+    padding: 15px 24px 16px;
+  }
+
+  @media (min-width: $breakpoint_xl) {
+    padding: 15px 32px 16px;
+  }
+}
+
+%section-title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  color: $second-color;
+}
+
+// price titles
+
+%price-subtitle {
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: $second-color;
+  opacity: 0.72;
+}
+
+// modal container
+
 %modal-container {
   background-color: $second-bg;
   max-width: 440px;
@@ -201,6 +254,8 @@
   }
 }
 
+// position modal
+
 %modal-position {
   position: absolute;
   top: 0;
@@ -209,6 +264,8 @@
   transform: translateY(-100%);
   pointer-events: none;
 }
+
+// modal title
 
 %modal-title {
   position: relative;
@@ -234,11 +291,17 @@
       }
     }
 
+    &:hover {
+      
+    }
+
     @media (min-width: $breakpoint_xm) {
       left: -31px;
     }
   }
 }
+
+// modal input
 
 %modal-input {
   width: 100%;

@@ -9,38 +9,25 @@
   }
 }
 
-
-
 .brands {
   &__title-wrapper {
     @extend %section-title-wrapper;
   }
 
-    &__swiper {
+  &__swiper {
     position: relative;
-    margin-right: -16px;
+    margin-left: -16px;
 
     @media (min-width: $breakpoint_sm) {
       margin-right: 0;
       margin-bottom: 24px;
     }
 
-    &::after {
-      position: absolute;
-      content: '';
-      top: 0;
-      right: 0;
-      display: block;
-      background-image: linear-gradient(
-        -90deg,
-        #f8f8f8 16.84%,
-        rgba(248, 248, 248, 0.0001) 100%
-      );
-      width: 24px;
-      height: 81px;
-      z-index: 2;
+    @extend %blur;
 
-      @media (min-width: $breakpoint_sm) {
+    @media (min-width: $breakpoint_sm) {
+      &::before,
+      &::after {
         content: none;
       }
     }
@@ -48,6 +35,7 @@
 
   &__list {
     @extend %swiper-list;
+    margin-left: 16px;
   }
 
   &__item {
@@ -96,8 +84,6 @@
     @extend %section-button-show-content;
   }
 }
-
-
 
 .swiper-pagination {
   display: flex;

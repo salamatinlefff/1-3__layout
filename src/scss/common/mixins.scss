@@ -17,8 +17,6 @@
   font-style: $style;
 }
 
-// @include font($size, $height: $size, $spacing: -0.2, $weight: 500, $style: normal);
-
 @mixin hover-dark($color, $percent: 20%) {
   background-color: mix(black, $color, $weight: $percent);
 }
