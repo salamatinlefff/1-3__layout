@@ -136,7 +136,7 @@ const page = () => {
 
       if (needCloseMenu) {
         closeMenu();
-        overlay.style.zIndex = 3;
+        overlay.style.zIndex = 4;
       }
     };
 
