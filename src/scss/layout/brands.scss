@@ -17,8 +17,10 @@
   &__swiper {
     position: relative;
     margin-left: -16px;
+    margin-right: -16px;
 
     @media (min-width: $breakpoint_sm) {
+      margin-left: 0;
       margin-right: 0;
       margin-bottom: 24px;
     }
@@ -36,6 +38,10 @@
   &__list {
     @extend %swiper-list;
     margin-left: 16px;
+
+    @media (min-width: $breakpoint_sm) {
+      margin-left: 0;
+    }
   }
 
   &__item {

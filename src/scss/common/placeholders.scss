@@ -10,7 +10,7 @@
   background-color: $burger-line;
 }
 
-// blur on menu (and swipers?)
+// blur on menu (and swipers)
 
 %blur {
   &::after,
@@ -182,10 +182,6 @@
 
 %section-title-wrapper {
   margin: 0 -16px 16px -16px;
-
-  @media (min-width: $breakpoint_sm) {
-    margin: 0 -24px 24px -24px;
-  }
 
   @media (min-width: $breakpoint_xl) {
     margin: 0 -32px 24px -32px;
